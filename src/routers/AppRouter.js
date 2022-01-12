@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { GlobalProvider } from '../context/GlobalState';
 import Header from '../components/Header';
 import Nav from '../components/Nav';
@@ -12,23 +12,21 @@ import PageNotFound from '../pages/PageNotFound';
 
 function AppRouter() {
   return (
-    <Router>
-      <GlobalProvider>
-        <div className="wrapper">
-          <Header />
-          <Nav />
-          <Router>
-            <Route path="/" exact><PageHome /></Route>
-            <Route path="/about"><PageAbout /></Route>
-            <Route path="/favourites"><PageFavourites /></Route>
-            <Route path="/individualmovie"><IndividualMovie /></Route>
-            <Route path="/contact"><PageContact /></Route>
-            <Route><PageNotFound /></Route>
-          </Router>
-          <Footer />
-        </div>
-      </GlobalProvider>
-    </Router>
+    <GlobalProvider>
+      <div className="wrapper">
+        <Header />
+        <Nav />
+        <Routes>
+          <Route path="/" element={<PageHome />} />
+          <Route path="/about" element={<PageAbout />} />
+          <Route path="/favourites" element={<PageFavourites />} />
+          <Route path="/individualmovie" element={<IndividualMovie />} />
+          <Route path="/contact" element={<PageContact />} />
+          <Route><PageNotFound /></Route>
+        </Routes>
+        <Footer />
+      </div>
+    </GlobalProvider>
   );
 }
 
