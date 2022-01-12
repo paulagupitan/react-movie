@@ -1,1 +1,1 @@
-export default globalState;
+// export default globalState;
