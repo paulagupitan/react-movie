@@ -1,0 +1,19 @@
+// Header
+header {
+    background-color: yellow;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 84px;
+    h1 {
+       color:black;
+    }
+    .user {
+        text-align: right;
+    }
+
+    p {
+        margin-bottom: 8px;
+    }
+}
