@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import { GlobalProvider } from '../context/GlobalState';
 import Header from '../components/Header';
 // import { appTitle, appAuthor } from '../globals/globalVariables';
-import NavMain from '../components/NavMain';
 import Footer from '../components/Footer';
 import PageHome from '../pages/PageHome';
 import PageAbout from '../pages/PageAbout';
@@ -18,7 +17,7 @@ function AppRouter() {
       
       <BrowserRouter>
         <Header />
-        
+
         <Routes>
           <Route path="/" element={<PageHome />} />
           <Route path="/about" element={<PageAbout />} />
