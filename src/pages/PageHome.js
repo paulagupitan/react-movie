@@ -1,27 +1,28 @@
 import { useState, useEffect } from 'react';
 import Movies from '../components/Movies';
 import { apiKey } from '../globals/globalVariables';
+import NavSort from '../components/NavSort';
 
 
-function PageHome() {
+function PageHome({ sort }) {
 
     const [moviesData, setMoviesData] = useState(null);
 
     useEffect(() => {
 
         const fetchMovies = async () => {
-            const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`);
-        let moviesDataFromAPI = await res.json();
+            const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?api_key=${apiKey}&language=en-US&page=1`);
+            let moviesDataFromAPI = await res.json();
 
-        moviesDataFromAPI = moviesDataFromAPI.results.splice(0,12);
-        console.log(moviesDataFromAPI);
-        setMoviesData(moviesDataFromAPI);
+            moviesDataFromAPI = moviesDataFromAPI.results.splice(0, 12);
+            console.log(moviesDataFromAPI);
+            setMoviesData(moviesDataFromAPI);
         }
 
         fetchMovies();
-    }
+    }, [sort]);
 
-    );
+
 
 
     return (
@@ -31,7 +32,7 @@ function PageHome() {
                 <p>This app was created with love ❤️ by Snowball. 😎...</p>
             </section>
             <section>
-
+                <NavSort />
                 {moviesData !== null && <Movies movies={moviesData} />}
 
             </section>
