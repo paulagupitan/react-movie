@@ -1,12 +1,12 @@
 // Type
 
 body {
-    font-family: $bodyFont;
-    color: $dark;
+    font-family: $textFont;
+    color: black;
 }
 
 h1, h2, h3, h4 {
-    font-family: $headingFont;
+    font-family: $textFont;
 }
 
 h1, h2, h3, h4, p {

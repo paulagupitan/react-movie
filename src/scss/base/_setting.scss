@@ -7,9 +7,16 @@ $textLight: white;
 
 
 // Fonts
-$bodyFont: 'Roboto', sans-serif;
-$headingFont: 'Alatsi', sans-serif;
-$bodyFont: 300;
+$textFont: 'Montserrat', sans-serif;
+$lightSize: 300;
+$regularSize: 400;
+$boldSize: 700;
+
 
 // Layout
 $section-padding: em(16) em(20);
+
+//Breakpoints
+$tablet: 540;
+$desktop: 820;
+$desktopWide: 1000;
