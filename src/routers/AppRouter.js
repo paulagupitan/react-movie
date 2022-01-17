@@ -22,7 +22,7 @@ function AppRouter() {
           <Route path="/" element={<PageHome />} />
           <Route path="/about" element={<PageAbout />} />
           <Route path="/favourites" element={<PageFavourites />}></Route>
-          <Route path="/individualmovie" element={<IndividualMovie />}></Route>
+          <Route path="/movie/:id" element={<IndividualMovie />}></Route>
           <Route path="/contact" element={<PageContact />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

@@ -11,7 +11,7 @@ function MovieCard({movie}) {
                 <p>{movie.release_date}</p>
                 <p>{movie.vote_average}</p>
                 <p>{movie.overview}</p>
-                <Link to='/'>More Info</Link>
+                <Link to={`/movie/${movie.id}`}>More Info</Link>
             </div>
 
             
