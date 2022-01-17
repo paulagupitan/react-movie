@@ -21,7 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.DS_Store
 node_modules/.bin/acorn
 node_modules/.bin/acorn
 node_modules/.bin/ansi-html
