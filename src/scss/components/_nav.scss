@@ -4,18 +4,29 @@ nav ul {
 
 
 .nav-sort {
-    a {
+  
+    ul {
+        font-size: 16px;
         display: flex;
-        text-align: right;
-        line-height: em(40);
+        justify-content: space-between;
+    }
+    a {
+        color: white;
+        font-size: 16px;
+        font-weight: $boldSize;
         text-decoration: none;
-        color: white;
-        &:hover,
-        &:focus,
-        &:active {
+        list-style: none;
+        display: block;
 
-        color: white;
+        &:hover {
+            color: #408196;
         }
     }
-   
+    
+    @media (min-width: 820px) {
+       a {
+        display: flex;
+        justify-content: right;
+       }
+     }
 }
