@@ -14,12 +14,16 @@ function AppRouter() {
   return (
     // <GlobalProvider>
     <div className="wrapper">
-      
+
       <BrowserRouter>
         <Header />
 
         <Routes>
-          <Route path="/" element={<PageHome />} />
+          <Route path="/" element={<PageHome sort="popular" />} />
+          <Route path="/sort/popular" element={<PageHome sort="popular" />} />
+          <Route path="/sort/top-rated" element={<PageHome sort="top_rated" />} />
+          <Route path="/sort/now-playing" element={<PageHome sort="now_playing" />} />
+          <Route path="/sort/upcoming" element={<PageHome sort="upcoming" />} />
           <Route path="/about" element={<PageAbout />} />
           <Route path="/favourites" element={<PageFavourites />}></Route>
           <Route path="/movie/:id" element={<IndividualMovie />}></Route>
@@ -29,9 +33,9 @@ function AppRouter() {
 
         <Footer />
       </BrowserRouter>
-       
 
-   
+
+
     </div>
     // </GlobalProvider>
   );
