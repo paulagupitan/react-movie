@@ -3,7 +3,7 @@ import MovieCard from './MovieCard';
 function Movies({movies}) {
     return (
         <div className="movies-container">
-            {movies.map((movie, i) => <MovieCard key={i} movie={movie} />)}
+            {movies.map(movie => <MovieCard key={movie.id} movie={movie} />)}
            {/* <MovieCard />  */}
         </div>
     )
