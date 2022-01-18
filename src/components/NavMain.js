@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 
 const NavMain = () => (
-    <nav className="nav-main">
-        <ul>
+    <nav className='nav-first'>
+        <ul className="nav-main">
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
             <li><NavLink to="/favourites">Favourites</NavLink></li>

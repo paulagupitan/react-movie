@@ -1,6 +1,20 @@
 import FavButton from "./FavButton";
 
 function SingleMovie({movie}) {
+
+    function dateFormat(string) {
+        const date = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(string).toLocaleDateString([], date);
+    }
+
+   function minToHrMin(time) {
+       let hour = Math.floor(time/60);
+       let min = time % 60;
+       let timeInHrMin =  `${hour}h ${min}m`;
+
+       return timeInHrMin;
+   }
+
     return (
         <div className="movie-card-single">
             <div className="movie-backdrop">
@@ -12,10 +26,10 @@ function SingleMovie({movie}) {
             <div className="movie-single">
                 <img className="poster-desktop" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
 
-                <div className="movie-info">
+                <div className="movie-info-single">
                     <div className="release-runtime-vote">
-                        <p>{movie.release_date}</p>
-                        <p>{movie.runtime}</p>
+                        <p>{dateFormat(movie.release_date)}</p>
+                        <p>{minToHrMin(movie.runtime)}</p>
                         <p className="vote">{movie.vote_average}</p>
                     </div>
                     <h2>{movie.title}</h2>

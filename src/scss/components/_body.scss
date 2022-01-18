@@ -1,5 +1,20 @@
 // Body
 body {
-    background-color: $bgDark;
-    color: white;
+  background-color: $bgDark;
+  color: $textLight;
+  font-family: $textFont;
+}
+
+.fav-page {
+  min-height: 70vh;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 18rem;
+}
+
+.about-page {
+  min-height: 70vh;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 18rem;
 }

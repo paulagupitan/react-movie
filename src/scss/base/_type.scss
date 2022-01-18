@@ -1,18 +1,25 @@
 // Type
 
 body {
-    font-family: $textFont;
-    color: black;
+  font-family: $textFont;
+  color: white;
 }
 
-h1, h2, h3, h4 {
-    font-family: $textFont;
+h1,
+h2,
+h3,
+h4 {
+  font-family: $textFont;
 }
 
-h1, h2, h3, h4, p {
-    margin-top: 0;
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
 }
 
 p {
-    line-height: 1.4;
+  line-height: 1.4;
 }
