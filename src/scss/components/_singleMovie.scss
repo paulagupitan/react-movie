@@ -1,0 +1,106 @@
+.movie-card-single {
+    position: relative;
+}
+
+.movie-backdrop {
+    height: 80vh;
+    
+    @include mq(820px) {
+        height: 100vh;
+        position: relative;
+    }
+
+    .backdrop-img {
+        min-width: 18rem;
+        height: 86vh;
+        object-fit: cover;
+        object-position: center;
+        opacity: 20%;
+
+        @include mq(820px) {
+            height: 100vh;
+        }
+    }
+
+    .poster-mobile {
+        position: absolute;
+        display: block;
+        margin: 1rem auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 80vh;
+        object-fit: cover;
+        object-position: center;
+
+        @include mq(820px) {
+            display: none;
+        }
+    }
+}
+
+.movie-single {
+    margin: 1rem auto;
+    width: 80%;
+
+    @include mq(820px) {
+        position: absolute;
+        inset: 0;
+        background-color: $bgDark;
+        // may need to create a new div or pseudoelement to fix opacity of everything inside this issue
+        opacity: 80%;
+        min-width: 800px;
+        max-width: 1200px;
+        height: 650px;
+        display: grid;
+        grid-template-columns: 1.2fr 2fr;
+    }
+    
+    .poster-desktop {
+        display: none;
+
+        @include mq(820px) {
+            display: block;
+            min-height: 650px;
+            object-fit: contain;
+        }
+    }
+
+    .movie-info-single {
+        color: $textLight;
+        margin: 4rem auto;
+
+        @include mq(820px) {
+            padding: 0 3rem;
+        }
+        
+        .release-runtime-vote {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            
+            .vote {
+                font-size: 1.5rem;
+                border: 1px solid $textLight;
+                border-radius: 10px;
+                // change bg color to something darker
+                background-color: $bgDark;
+                padding: 0.25rem 0.75rem;
+            }
+        }
+        
+        button {
+            display: block;
+            margin: 2rem auto 0;
+            border: 1px solid $textLight;
+            border-radius: 10px;
+            background-color: $brandDark;
+            color: $textLight;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+
+

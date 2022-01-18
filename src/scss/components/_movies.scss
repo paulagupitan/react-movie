@@ -1,19 +1,21 @@
 .movies-container {
+   
+    padding: em(20);
+
+ @media (min-width: 540px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: em(14); 
+ }
+
+ @media (min-width: 820px) {
     padding: em(12);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
-    @include mq($tablet){
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: em(14);
-    }
-
-    @include mq($desktop){
-        padding: em(20);
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: em(18);
-    }
+    color: white;
+    font-size: .8em;
+ }
+   
 
 }
 
@@ -28,7 +30,7 @@
    
     }
 
-    @include mq($tablet){
-        margin-bottom: 0;
-    }
+    // @include mq($tablet){
+    //     margin-bottom: 0;
+    // }
 }

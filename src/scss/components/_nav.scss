@@ -1,25 +1,34 @@
+
+nav ul {
+    list-style: none;
+}
+
+
 .nav-sort {
-  display: flex;
-  justify-content: space-evenly;
-  list-style-type: none;
-  font-weight: 600;
-  font-size: 1.5rem;
+  
+    ul {
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+    a {
+        color: white;
+        font-size: 16px;
+        font-weight: $boldSize;
+        text-decoration: none;
+        list-style: none;
+        display: block;
 
-  a {
-    text-decoration: none;
-    color: $textLight;
-  }
+        &:hover {
+            color: #408196;
+        }
+    }
+    
+    @media (min-width: 820px) {
+       a {
+        display: flex;
+        justify-content: right;
+       }
+     }
 }
 
-.nav-main {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 20px;
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-}
-
-.nav-first {
-  width: 40%;
-}

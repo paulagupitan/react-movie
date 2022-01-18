@@ -30,6 +30,7 @@ function PageHome({ sort, movie }) {
         <main>
             <section>
                 <h2>Inser Banner here</h2>
+
             </section>
             <section>
                 <NavSort />
