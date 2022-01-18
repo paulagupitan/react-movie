@@ -1,3 +1,21 @@
 nav ul {
     list-style: none;
 }
+
+
+.nav-sort {
+    a {
+        display: flex;
+        text-align: right;
+        line-height: em(40);
+        text-decoration: none;
+        color: white;
+        &:hover,
+        &:focus,
+        &:active {
+
+        color: white;
+        }
+    }
+   
+}

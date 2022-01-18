@@ -2,6 +2,8 @@
     padding: em(12);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    color: white;
+    font-size: .8em;
 
     @include mq($tablet){
         display: grid;
