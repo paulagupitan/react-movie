@@ -1,24 +1,85 @@
-// .movie-card {
-//     position: relative;
-// }
+.movie-poster {
+    position: relative;
+}
 
-// .movie-card:hover .more-info,
-// .movie-card:active .more-info{
-//     transition: 0.4s ease-in;
-//     opacity: 1;
-// }
+.image {
+    display: block;
+    width: 100%;
+}
 
-// .movie-info {
-//     background-color: black;
-//     opacity: 0;
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     transition: 0.4s ease-in;
-// }
+.movie-info {
+    position: absolute;
+    padding: 2em;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
 
-// .movie-info:hover .more-card .movie-info,
-// .movie-info:active .more-card .movie-info {
-//     transition: 0.4s ease-in;
-//     opacity: 1;
-// }
+.movie-info:hover {
+    opacity: .9;
+}
+
+
+.movie-date {
+    position: absolute;
+    font-size: 12px;
+    font-weight: $regularSize;
+}
+
+
+.movie-rating {
+    position: absolute;
+    font-size: 22px;
+    padding: 10px 10px;
+    right: 20px;
+    width: 60px;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.movie-info h2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 20px;
+    margin-top: 90px;
+    font-weight: $boldSize;
+}
+
+.movie-overview {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    font-size: 12px;
+    font-weight: $regularSize;
+}
+
+
+.more-info-btn {
+    position: absolute;
+    background-color: $brandDark;
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 40px;
+    font-weight: $regularSize;
+}
+
