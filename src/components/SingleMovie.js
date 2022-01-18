@@ -1,3 +1,5 @@
+import FavButton from "./FavButton";
+
 function SingleMovie({movie}) {
     return (
         <div className="movie-card">
@@ -14,7 +16,7 @@ function SingleMovie({movie}) {
                 <h2>{movie.title}</h2>
                 <p>{movie.overview}</p>
                 <p>Genre: {movie.genres[0].name}</p>
-                <button>Add to Favourites</button>
+                <FavButton />
             </div>
 
             
