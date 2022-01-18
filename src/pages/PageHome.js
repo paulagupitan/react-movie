@@ -28,7 +28,7 @@ function PageHome({ sort }) {
     return (
         <main>
             <section>
-                <h2>Home</h2>
+                {/* <h2>Home</h2> */}
             </section>
             <section>
                 <NavSort />
