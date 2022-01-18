@@ -7,7 +7,7 @@
     width: 100%;
 }
 
-.movie-info {
+.overlay {
     position: absolute;
     padding: 2em;
     top: 0;
@@ -24,7 +24,7 @@
     transition: opacity 0.25s;
 }
 
-.movie-info:hover {
+.overlay:hover {
     opacity: .9;
 }
 
