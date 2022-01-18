@@ -4,7 +4,8 @@ import { apiKey } from '../globals/globalVariables';
 import NavSort from '../components/NavSort';
 
 
-function PageHome({ sort }) {
+
+function PageHome({ sort, movie }) {
 
     const [moviesData, setMoviesData] = useState(null);
 
@@ -28,7 +29,7 @@ function PageHome({ sort }) {
     return (
         <main>
             <section>
-                <h2>Home</h2>
+                <h2>Inser Banner here</h2>
             </section>
             <section>
                 <NavSort />

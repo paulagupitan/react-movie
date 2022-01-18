@@ -1,3 +1,25 @@
-nav ul {
-    list-style: none;
+.nav-sort {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  font-weight: 600;
+  font-size: 1.5rem;
+
+  a {
+    text-decoration: none;
+    color: $textLight;
+  }
+}
+
+.nav-main {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.nav-first {
+  width: 40%;
 }

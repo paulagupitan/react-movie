@@ -1,0 +1,38 @@
+footer {
+  color: white;
+  font-family: $textFont;
+  background-color: $brandDark;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 84px;
+
+  .footer-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  ul {
+    list-style-type: none;
+  }
+
+  p {
+    margin-bottom: 8px;
+  }
+}
