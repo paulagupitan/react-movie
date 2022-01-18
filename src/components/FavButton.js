@@ -7,6 +7,16 @@ function FavButton({ movie, remove, handleFavClick }) {
     function handleRemoveFav(){
         handleFavClick(false, movie);
     }
+
+// function FavButton() {
+
+//     // function handleAddFav(remove){
+//     //     // remove === true;
+//     // }
+
+//     // function handleRemoveFav(remove){
+//     //     // remove === false;
+//     // }
     
     return (
         <div>

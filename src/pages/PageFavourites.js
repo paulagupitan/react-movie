@@ -1,9 +1,9 @@
 // import MovieCard from '../components/MovieCard';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 function PageFavourites() {
 
-    const [favMovie, setFavMovie] = useState(null);
+   // const [favMovie, setFavMovie] = useState(null);
 
     return (
         <main>
