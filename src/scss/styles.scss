@@ -1,4 +1,20 @@
+//font 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap');
+
+//Utilities
+@import './utilities/functions';
+@import './utilities/mixins';
+@import './utilities/utility-classes';
+@import './base/setting';
+
+//components
 @import './components/footer';
 @import './components/header';
 @import './components/nav';
 @import './components/wrapper';
+@import './components/movies';
+@import './components/body';
+
+//Resets
+@import './base/reset';
+@import './base/type';
