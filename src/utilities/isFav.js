@@ -1,14 +1,14 @@
-function isFav(arr, path, id){
+function isFav(arr, path, id) {
 
-    if(path === '/favourites'){
-        return true;
-    }
+  if (path === '/favourites') {
+    return true;
+  }
 
-    if(arr.length === 0){
-      return false;
-    }
+  if (arr.length === 0) {
+    return false;
+  }
 
-    return arr.some((obj) => obj.id === id);
+  return arr.some((obj) => obj.id === id);
 
 }
 
