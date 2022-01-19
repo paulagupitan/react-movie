@@ -58,13 +58,13 @@ export function addToFavs(movie) {
 export function removeFromFavs(movie) {
 
     let favsFromStorage = localStorage.getItem('faved');
-    let favsForStorage;
-
     favsFromStorage = JSON.parse(favsFromStorage);
-    favsFromStorage.splice(0,1);
+
+    const isTheMovie = (obj) => obj.id === movie.id;
+    let indexOfItemToRemove = favsFromStorage.findIndex(isTheMovie);
+    favsFromStorage.splice(indexOfItemToRemove, 1);
     favsFromStorage = JSON.stringify(favsFromStorage);
-    localStorage.removeItem('faved', favsFromStorage);
-    return;
+    localStorage.setItem('faved', favsFromStorage);
     
 }
 
