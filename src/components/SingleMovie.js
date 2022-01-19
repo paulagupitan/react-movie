@@ -1,19 +1,21 @@
 import FavButton from "./FavButton";
 
-function SingleMovie({movie}) {
+function SingleMovie({ movie }) {
 
     function dateFormat(string) {
         const date = { year: 'numeric', month: 'long', day: 'numeric' };
         return new Date(string).toLocaleDateString([], date);
     }
 
-   function minToHrMin(time) {
-       let hour = Math.floor(time/60);
-       let min = time % 60;
-       let timeInHrMin =  `${hour}h ${min}m`;
+    function minToHrMin(time) {
+        let hour = Math.floor(time / 60);
+        let min = time % 60;
+        let timeInHrMin = `${hour}h ${min}m`;
 
-       return timeInHrMin;
-   }
+        return timeInHrMin;
+    }
+
+
 
     return (
         <div className="movie-card-single">
@@ -22,7 +24,7 @@ function SingleMovie({movie}) {
                 <img className="poster-mobile" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
 
             </div>
-       
+
             <div className="movie-single">
                 <img className="poster-desktop" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
 
@@ -35,8 +37,8 @@ function SingleMovie({movie}) {
                     <h2>{movie.title}</h2>
                     <p>{movie.overview}</p>
                     <p>Genre: {movie.genres[0].name}</p>
-                    <FavButton movie={movie}/>
-                </div>      
+                    <FavButton movie={movie} />
+                </div>
             </div>
         </div>
     )
