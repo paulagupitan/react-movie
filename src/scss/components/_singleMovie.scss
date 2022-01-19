@@ -46,9 +46,10 @@
     @include mq(820px) {
         position: absolute;
         inset: 0;
-        background-color: $bgDark;
-        // may need to create a new div or pseudoelement to fix opacity of everything inside this issue
-        opacity: 80%;
+        // background-color: $bgDark;
+        // background-color: rgba(4, 36, 64, 0.8);
+        // background-color: rgba(17, 23, 30, 0.9);
+        background-color: rgba(0, 0, 0, 0.7);
         min-width: 800px;
         max-width: 1200px;
         height: 650px;
