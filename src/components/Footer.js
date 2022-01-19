@@ -21,9 +21,13 @@ const Footer = () => (
             <li>Help Center</li>
             <li>Media Center</li>
         </ul>
-        <div>
+        <div className='educational'>
             <p>For Educational Purpose</p>
-            <p>Megan Cheung - Judy Gong - Paul Agupitan copyright 2022</p>
+            <p>Megan Cheung<br>
+            </br>Judy Gong<br>
+                </br>Paul Agupitan<br>
+                </br></p>
+            <p>Copyright 2022</p>
         </div>
     </footer>
 );

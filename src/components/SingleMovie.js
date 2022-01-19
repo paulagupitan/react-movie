@@ -35,7 +35,7 @@ function SingleMovie({movie}) {
                     <h2>{movie.title}</h2>
                     <p>{movie.overview}</p>
                     <p>Genre: {movie.genres[0].name}</p>
-                    <FavButton />
+                    <FavButton movie={movie}/>
                 </div>      
             </div>
         </div>

@@ -9,14 +9,15 @@ import PageFavourites from '../pages/PageFavourites';
 import IndividualMovie from '../pages/IndividualMovie';
 import PageContact from '../pages/PageContact';
 import PageNotFound from '../pages/PageNotFound';
+// import Sidebar from "../components/Sidebar";
 
 function AppRouter() {
   return (
-    // <GlobalProvider>
     <div className="wrapper">
 
       <BrowserRouter>
         <Header />
+        {/* <Sidebar /> */}
 
         <Routes>
           <Route path="/" element={<PageHome sort="popular" />} />
@@ -37,7 +38,6 @@ function AppRouter() {
 
 
     </div>
-    // </GlobalProvider>
   );
 }
 
