@@ -1,37 +1,32 @@
-function FavButton({ movie, remove, handleFavClick }) {
+import {useState, useEffect} from 'react';
+import { isFav, addToFavs, removeFromFavs } from '../utilities/storage';
+
+function FavButton({movie}) {
     
-    function handleAddFav(){
-        handleFavClick(true, movie);
+    const [fav, setFav] = useState( isFav(movie) );
+
+    let handleAddToFavs = () => {
+        setFav(true);
+        addToFavs(movie);
+        }
+    
+    let handleRemoveFromFavs = () => {
+        setFav(false);
+        removeFromFavs(movie);
     }
-
-    function handleRemoveFav(){
-        handleFavClick(false, movie);
-    }
-
-// function FavButton() {
-
-//     // function handleAddFav(remove){
-//     //     // remove === true;
-//     // }
-
-//     // function handleRemoveFav(remove){
-//     //     // remove === false;
-//     // }
     
     return (
         <div>
 
-            {remove === false ?
-            <button onClick={handleAddFav}>Add to Favourites</button> :
-            <button onClick={handleRemoveFav}>Remove from Favourites</button>            
+            {fav === false ?
+            <button onClick={handleAddToFavs}>Add to Favourites</button> :
+            <button onClick={handleRemoveFromFavs}>Remove from Favourites</button>            
             }
+
+
 
         </div>
     )
-}
-
-FavButton.defaultProps = {
-    remove: false
 }
 
 export default FavButton
