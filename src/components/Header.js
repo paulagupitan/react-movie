@@ -3,12 +3,15 @@ import NavMain from './NavMain';
 import logo from '../images/movie-logo.jpg';
 
 
+
+
 const Header = ({ title }) => (
     <header>
-        <Link className="logo" to={'/'}><img className="footer-logo" src={logo} alt="Logo" /></Link>
+        <Link className="logo" to={'/'}><img className="header-logo" src={logo} alt="Logo" /></Link>
         {/* <h1><Link to="/">{title}</Link></h1> */}
         <NavMain />
     </header>
+
 );
 
 Header.defaultProps = {

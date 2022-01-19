@@ -1,25 +1,32 @@
 footer {
+  height: 60vh;
   color: white;
   font-family: $textFont;
   background-color: $brandDark;
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 1rem;
+  display: block;
+  // justify-content: space-between;
+  // align-items: center;
+  margin: 0 auto;
   min-height: 84px;
 
-  .footer-link {
+  .footer-logo {
+    max-width: 150px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+  //stuck with this
+  .footer-link li {
+    background-color: red;
+    display: block;
+    text-align: center;
   }
 
   .footer-list {
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
-
   h1 {
     color: white;
   }
@@ -34,5 +41,46 @@ footer {
 
   p {
     margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    color: white;
+    font-family: $textFont;
+    background-color: $brandDark;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 84px;
+
+    .footer-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: white;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    ul {
+      list-style-type: none;
+    }
+
+    p {
+      margin-bottom: 8px;
+    }
   }
 }
