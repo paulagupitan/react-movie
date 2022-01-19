@@ -5,6 +5,8 @@ import NavSort from '../components/NavSort';
 
 
 
+
+
 function PageHome({ sort, movie }) {
 
     const [moviesData, setMoviesData] = useState(null);
@@ -24,14 +26,9 @@ function PageHome({ sort, movie }) {
     }, [sort]);
 
 
-
-
     return (
         <main>
-            <section>
-                <h2>Inser Banner here</h2>
 
-            </section>
             <section>
                 <NavSort />
                 {moviesData !== null && <Movies movies={moviesData} />}
