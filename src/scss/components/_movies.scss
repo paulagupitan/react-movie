@@ -1,36 +1,42 @@
 .movies-container {
    
-    padding: em(20);
-
- @media (min-width: 540px) {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: em(14); 
+    grid-template-columns: 1fr;
+    grid-gap: 1.5em;
+    padding: 1.5em;
+
+@media (min-width: 576px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em; 
+        padding: 1.5em;
+     }
+
+ @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color:white;
+    gap: 1.5em; 
+    padding: 1.5em;
  }
 
- @media (min-width: 820px) {
-    padding: em(12);
+ @media (min-width: 992px) {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     color: white;
     font-size: .8em;
+    gap: 1.5em; 
+    padding: 1.5em;
  }
-   
+ 
+ @media (min-width: 1200px) {
+    padding: em(12);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    color: white;
+    font-size: .8em;
+    gap: 1.5em; 
+    padding: 1.5em;
+ }
 
-}
-
-
-.movie-card {
-    padding: em(10);
-    margin-bottom: em(16);
-
-
-    img {
-        width: 100%;
-   
-    }
-
-    // @include mq($tablet){
-    //     margin-bottom: 0;
-    // }
 }

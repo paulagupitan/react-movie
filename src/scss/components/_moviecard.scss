@@ -2,12 +2,7 @@
     position: relative;
 }
 
-.image {
-    display: block;
-    width: 100%;
-}
-
-.overlay {
+.movie-info {
     position: absolute;
     padding: 2em;
     top: 0;
@@ -24,14 +19,14 @@
     transition: opacity 0.25s;
 }
 
-.overlay:hover {
+.movie-info:hover {
     opacity: 1;
 }
 
 
 .movie-date {
     position: absolute;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: $regularSize;
 }
 
@@ -71,14 +66,16 @@
 .more-info-btn {
     background-color: $brandDark;
     border: none;
-    color: white;
-    text-decoration: none;
     padding: 14px 20px;
     border-radius: 10px;
-    font-size: 14px;
-    font-weight: $regularSize;
     display: block;
     margin: 0 auto;
-
+    margin-top: 20%;
 }
 
+button.more-info-btn {
+    color: white;
+    font-size: 12px;
+    font-weight: $regularSize;
+    text-decoration: none;
+}
