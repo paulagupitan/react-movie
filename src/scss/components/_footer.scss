@@ -1,34 +1,52 @@
 footer {
-  height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr;
   color: white;
   font-family: $textFont;
   background-color: $brandDark;
-  padding: 1rem;
-  display: block;
-  // justify-content: space-between;
-  // align-items: center;
-  margin: 0 auto;
-  min-height: 84px;
+  text-align: center;
+  position: relative;
+  padding: 2rem;
 
   .footer-logo {
-    max-width: 150px;
+    width: 35%;
+    height: auto;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 1rem;
   }
-  //stuck with this
-  .footer-link li {
-    background-color: red;
-    display: block;
-    text-align: center;
+
+  .footer-link {
+    margin: 0 auto;
+    font-size: 12px;
+    padding-right: 2.5rem;
+
+    li {
+      margin: 0 auto;
+      padding-bottom: 5px;
+      margin-top: 4px;
+    }
   }
 
   .footer-list {
-    align-items: center;
+    margin: 0 auto;
+    font-size: 12px;
+    padding-right: 2.5rem;
+    li {
+      margin: 0 auto;
+      padding-bottom: 5px;
+      margin-top: 4px;
+    }
   }
-  h1 {
-    color: white;
+
+  .footer-info {
+    margin: 0 auto;
+    font-size: 12px;
+
+    p,
+    li {
+      list-style-type: none;
+      padding-bottom: 5px;
+      margin-top: 4px;
+    }
   }
 
   a {
@@ -44,7 +62,7 @@ footer {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   footer {
     color: white;
     font-family: $textFont;
