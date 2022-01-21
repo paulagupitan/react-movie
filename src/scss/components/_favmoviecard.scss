@@ -1,8 +1,8 @@
-.movie-poster {
+.fav-movie-poster {
     position: relative;
 }
 
-.movie-info {
+.fav-movie-info {
     position: absolute;
     padding: 2em;
     top: 0;
@@ -19,19 +19,19 @@
     transition: opacity 0.25s;
 }
 
-.movie-info:hover {
+.fav-movie-info:hover {
     opacity: 1;
 }
 
 
-.movie-date {
+.fav-movie-date {
     position: absolute;
     font-size: 14px;
     font-weight: $regularSize;
 }
 
 
-.movie-rating {
+.fav-movie-rating {
     position: absolute;
     font-size: 22px;
     padding: 10px 10px;
@@ -42,7 +42,7 @@
     text-align: center;
 }
 
-.movie-info h2 {
+.fav-movie-info h2 {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -52,7 +52,7 @@
     font-weight: $boldSize;
 }
 
-.movie-overview {
+.fav-movie-overview {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 4;

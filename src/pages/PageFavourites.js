@@ -1,18 +1,50 @@
 // import MovieCard from '../components/MovieCard';
-// import { useState } from 'react';
+import FavCard from '../components/FavCard';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { apiKey } from '../globals/globalVariables';
+import Favorites from '../components/Favorites';
+import FavButton from "../components/FavButton";
+import { getFavs } from '../utilities/storage';
 
-function PageFavourites() {
+function PageFavourites({ movie }) {
 
-   // const [favMovie, setFavMovie] = useState(null);
+    function dateFormat(string) {
+        const date = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(string).toLocaleDateString([], date);
+    }
+
+    function minToHrMin(time) {
+        let hour = Math.floor(time / 60);
+        let min = time % 60;
+        let timeInHrMin = `${hour}h ${min}m`;
+
+        return timeInHrMin;
+    }
+
+
+    const [favs, setFavs] = useState(false);
+
+
+    useEffect(() => {
+
+        console.log(getFavs());
+        console.log(favs);
+
+        setFavs(getFavs());
+
+    }, []);
+
+
 
     return (
         <main>
             <section className="fav-page">
-                <h2>No movies have been added to favourites.</h2>
-                <p>To add a movie to your favourites, click on the Movie Title or hover over a movie poster to go to that specific movie's description page.</p>
+
+                {favs !== false && favs.length > 0 ? favs.map(movie => <FavCard key={movie.id} movie={movie} />) : <p>You do not have any favorite</p>}
 
             </section>
-        </main>
+        </main >
     );
 }
 
