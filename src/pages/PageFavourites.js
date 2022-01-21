@@ -1,4 +1,5 @@
-import MovieCard from '../components/MovieCard';
+// import MovieCard from '../components/MovieCard';
+import FavCard from '../components/FavCard';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { apiKey } from '../globals/globalVariables';
@@ -40,14 +41,10 @@ function PageFavourites({ movie }) {
         <main>
             <section className="fav-page">
 
-                hello....
-
-                {/* //if favs is greater than 0 then show the fav movies, if not then show msg */}
-
-                {favs !== false && favs.length > 0 ? favs.map(movie => <MovieCard key={movie.id} movie={movie} />) : <p>You do not have any favorite</p>}
+                {favs !== false && favs.length > 0 ? favs.map(movie => <FavCard key={movie.id} movie={movie} />) : <p>You do not have any favorite</p>}
 
             </section>
-        </main>
+        </main >
     );
 }
 
