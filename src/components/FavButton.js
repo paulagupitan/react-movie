@@ -19,8 +19,8 @@ function FavButton({movie}) {
         <div>
 
             {fav === false ?
-            <button onClick={handleAddToFavs}>Add to Favourites</button> :
-            <button onClick={handleRemoveFromFavs}>Remove from Favourites</button>            
+            <button className="fav-button" onClick={handleAddToFavs}>Add to Favourites</button> :
+            <button className="fav-button" onClick={handleRemoveFromFavs}>Remove from Favourites</button>            
             }
 
 
