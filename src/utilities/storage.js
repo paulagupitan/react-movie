@@ -1,29 +1,29 @@
 
-export function getFavs(){
+export function getFavs() {
     let favs = localStorage.getItem('faved');
 
-    if(favs === null){
+    if (favs === null) {
         favs = [];
-    }else{
+    } else {
         favs = JSON.parse(favs);
     }
 
     return favs;
 }
 
-export function isFav(movie){
+export function isFav(movie) {
 
     const favsFromStorage = getFavs();
 
-    if(favsFromStorage.length === 0){
+    if (favsFromStorage.length === 0) {
         return false;
     }
-      
-      function isInFavs(obj) {
-        return obj.id === movie.id;
-      }
 
-      return favsFromStorage.find(isInFavs) !== undefined ? true : false;
+    function isInFavs(obj) {
+        return obj.id === movie.id;
+    }
+
+    return favsFromStorage.find(isInFavs) !== undefined ? true : false;
 
 }
 
@@ -32,7 +32,7 @@ export function addToFavs(movie) {
     let favsFromStorage = localStorage.getItem('faved');
     let favsForStorage;
 
-    if(favsFromStorage === null){
+    if (favsFromStorage === null) {
         favsForStorage = [movie];
         favsForStorage = JSON.stringify(favsForStorage);
         localStorage.setItem('faved', favsForStorage);
@@ -41,7 +41,7 @@ export function addToFavs(movie) {
 
     favsFromStorage = JSON.parse(favsFromStorage)
 
-    if(!Array.isArray(favsFromStorage)){
+    if (!Array.isArray(favsFromStorage)) {
         favsForStorage = [movie];
         favsForStorage = JSON.stringify(favsForStorage);
         localStorage.setItem('faved', favsForStorage);
@@ -65,6 +65,6 @@ export function removeFromFavs(movie) {
     favsFromStorage.splice(indexOfItemToRemove, 1);
     favsFromStorage = JSON.stringify(favsFromStorage);
     localStorage.setItem('faved', favsFromStorage);
-    
+
 }
 
