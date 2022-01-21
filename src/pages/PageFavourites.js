@@ -1,10 +1,7 @@
 // import MovieCard from '../components/MovieCard';
 import FavCard from '../components/FavCard';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { apiKey } from '../globals/globalVariables';
-import Favorites from '../components/Favorites';
-import FavButton from "../components/FavButton";
+// import { useParams } from 'react-router-dom';
 import { getFavs } from '../utilities/storage';
 
 function PageFavourites({ movie }) {
@@ -14,22 +11,11 @@ function PageFavourites({ movie }) {
         return new Date(string).toLocaleDateString([], date);
     }
 
-    function minToHrMin(time) {
-        let hour = Math.floor(time / 60);
-        let min = time % 60;
-        let timeInHrMin = `${hour}h ${min}m`;
-
-        return timeInHrMin;
-    }
-
 
     const [favs, setFavs] = useState(false);
 
 
     useEffect(() => {
-
-        console.log(getFavs());
-        console.log(favs);
 
         setFavs(getFavs());
 
