@@ -4,7 +4,7 @@ import {useParams} from 'react-router-dom';
 import {apiKey} from '../globals/globalVariables';
 import SingleMovie from '../components/SingleMovie';
 
-function IndividualMovie() {
+function IndividualMovie( {favourites, setFavourites} ) {
 
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
@@ -21,7 +21,7 @@ function IndividualMovie() {
 
     return (
         <section>
-           {movie !== null && <SingleMovie movie={movie} />}
+           {movie !== null && <SingleMovie favourites={favourites} setFavourites={setFavourites} movie={movie} />}
 
         </section>
     );

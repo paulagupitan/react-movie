@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 // import { useParams } from 'react-router-dom';
 import { getFavs } from '../utilities/storage';
 
-function PageFavourites({ movie }) {
+function PageFavourites({ favourites, setFavourites }) {
 
     function dateFormat(string) {
         const date = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -12,14 +12,18 @@ function PageFavourites({ movie }) {
     }
 
 
-    const [favs, setFavs] = useState(false);
+    // const [favs, setFavs] = useState(localStorage.getItem('faved') | false);
 
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        setFavs(getFavs());
+    //     console.log(getFavs());
+    //     console.log(favs);
+    //     console.log('useEffect');
 
-    }, []);
+    //     setFavs(getFavs());
+
+    // }, []);
 
 
 
@@ -27,7 +31,7 @@ function PageFavourites({ movie }) {
         <main>
             <section className="fav-page">
 
-                {favs !== false && favs.length > 0 ? favs.map(movie => <FavCard key={movie.id} movie={movie} />) : <p>You do not have any favorite</p>}
+                {favourites ? favourites.map(movie => <FavCard favourites={favourites} setFavourites={setFavourites} key={movie.id} movie={movie} />) : <p>You do not have any favorite</p>}
 
             </section>
         </main >

@@ -1,18 +1,21 @@
 import { useState, useEffect } from 'react';
 import { isFav, addToFavs, removeFromFavs } from '../utilities/storage';
 
-function FavButton({ movie }) {
+function FavButton({ movie, favourites, setFavourites }) {
+
+    const [fav, setFav] = useState(isFav(movie, favourites));
 
     const [fav, setFav] = useState(isFav(movie));
     const [favList, setFavList] = useState();
     let handleAddToFavs = () => {
         setFav(true);
-        addToFavs(movie);
+        setFavourites([...favourites, movie]);
     }
 
     let handleRemoveFromFavs = () => {
         setFav(false);
-        removeFromFavs(movie);
+        const updatedFavourites = favourites.filter(favourite => movie.id !== favourite.id)
+        setFavourites(updatedFavourites)
     }
 
     return (

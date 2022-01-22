@@ -1,6 +1,6 @@
 import FavButton from "./FavButton";
 
-function SingleMovie({ movie }) {
+function SingleMovie({ movie, favourites, setFavourites }) {
 
     function dateFormat(string) {
         const date = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -37,7 +37,7 @@ function SingleMovie({ movie }) {
                     <h2>{movie.title}</h2>
                     <p>{movie.overview}</p>
                     <p>Genre: {movie.genres[0].name}</p>
-                    <FavButton movie={movie} />
+                    <FavButton favourites={favourites} setFavourites={setFavourites} movie={movie} />
                 </div>
             </div>
         </div>
