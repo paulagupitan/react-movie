@@ -11,19 +11,24 @@ export function getFavs() {
     return favs;
 }
 
-export function isFav(movie) {
+export function isFav(movie, favourites) {
 
-    const favsFromStorage = getFavs();
+    // const favsFromStorage = getFavs();
 
-    if (favsFromStorage.length === 0) {
-        return false;
-    }
+    // if (favsFromStorage.length === 0) {
+    //     return false;
+    // }
 
-    function isInFavs(obj) {
-        return obj.id === movie.id;
-    }
+    // function isInFavs(obj) {
+    //     return obj.id === movie.id;
+    // }
 
-    return favsFromStorage.find(isInFavs) !== undefined ? true : false;
+    // return favsFromStorage.find(isInFavs) !== undefined ? true : false;
+
+    const movieInFavourites = favourites.find(favourite => favourite.id === movie.id);
+    // either will be equal to the movie, or undefined 
+
+    return movieInFavourites === undefined ? false : true;
 
 }
 

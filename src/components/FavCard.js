@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import FavButton from "./FavButton";
 
-function FavCard({ movie }) {
+function FavCard({ movie, favourites, setFavourites }) {
 
     function dateFormat(string) {
         const date = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -19,7 +19,7 @@ function FavCard({ movie }) {
                     <h3 className="fav-movie-rating">{movie.vote_average}</h3>
                     <h2>{movie.title}</h2>
                     <p className="fav-movie-overview">{movie.overview}</p>
-                    <FavButton movie={movie} />
+                    <FavButton favourites={favourites} setFavourites={setFavourites} movie={movie} />
                 </div>
             </div>
         </div>

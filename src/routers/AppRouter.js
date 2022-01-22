@@ -9,9 +9,20 @@ import PageFavourites from '../pages/PageFavourites';
 import IndividualMovie from '../pages/IndividualMovie';
 import PageContact from '../pages/PageContact';
 import PageNotFound from '../pages/PageNotFound';
+import { getFavs } from "../utilities/storage";
+import { useEffect, useState } from "react";
 // import Sidebar from "../components/Sidebar";
 
 function AppRouter() {
+
+  const [favourites, setFavourites] = useState(getFavs())
+
+  useEffect(() => {
+    console.log("favourites has changed!")
+    localStorage.setItem('faved', JSON.stringify(favourites))
+  }, [favourites])
+
+
   return (
     <div className="wrapper">
 
@@ -26,7 +37,7 @@ function AppRouter() {
           <Route path="/sort/now-playing" element={<PageHome sort="now_playing" />} />
           <Route path="/sort/upcoming" element={<PageHome sort="upcoming" />} />
           <Route path="/about" element={<PageAbout />} />
-          <Route path="/favourites" element={<PageFavourites />}></Route>
+          <Route path="/favourites" element={<PageFavourites favourites={favourites} setFavourites={setFavourites}/>}></Route>
           <Route path="/movie/:id" element={<IndividualMovie />}></Route>
           <Route path="/contact" element={<PageContact />} />
           <Route path="*" element={<PageNotFound />} />
