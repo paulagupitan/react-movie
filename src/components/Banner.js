@@ -1,19 +1,20 @@
 import { Link } from 'react-router-dom';
+import banner from '../images/banner.jpeg';
 
 
 function Banner({ movie }) {
 
-    function dateFormat(string) {
-        const date = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(string).toLocaleDateString([], date);
-    }
+    // function dateFormat(string) {
+    //     const date = { year: 'numeric', month: 'long', day: 'numeric' };
+    //     return new Date(string).toLocaleDateString([], date);
+    // }
 
     return (
         <div className="movie-card">
-            <div className="movie-poster">
-                <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} />
+            <div className="movie-backdrop">
+                <img className="backdrop-img" src={banner} alt={"Kate"} />
 
-                <div className="movie-info">
+                {/* <div className="movie-info">
 
                     <h3 className="movie-date">{dateFormat(movie.release_date)}</h3>
                     <h3 className="movie-rating">{movie.vote_average}</h3>
@@ -23,7 +24,7 @@ function Banner({ movie }) {
                         <Link to={`/movie/${movie.id}`}><button className="more-info-btn">More Info</button></Link>
 
                     </div>
-                </div>
+                </div> */}
             </div>
 
 
