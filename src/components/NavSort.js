@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 function NavSort() {
     return (
-        <nav >
+        <nav className="nav-container">
             <ul className="nav-sort">
                 <li>
                     <NavLink to='/sort/popular'>Popular</NavLink>

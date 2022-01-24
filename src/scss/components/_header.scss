@@ -3,14 +3,15 @@ header {
   color: white;
   font-family: $textFont;
   background-color: $brandDark;
-  padding: 2rem;
+  padding: 1em 1.5em 1em 1.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 50px;
+
+
 
   img {
-    width: 170px;
+    width: 160px;
   }
   h1 {
     color: white;
@@ -19,6 +20,12 @@ header {
   a {
     color: white;
     text-decoration: none;
+    font-size: 1rem;
+    font-weight: $regularSize;
+
+    &:hover {
+      color: $textDark;
+    }
   }
   .user {
     text-align: right;

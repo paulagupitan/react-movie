@@ -2,19 +2,25 @@
   display: none;
 }
 
+
 .nav-sort {
+
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
   row-gap: 20px;
+  padding: .7rem 0 .7rem 0;
+
   a {
+
     text-decoration: none;
     color: white;
     margin: 0 auto;
     text-align: center;
-    font-size: 15px;
-    font-weight: $boldSize;
+    font-size: 1rem;
+    font-weight: $regularSize;
+
     &:hover {
       color: #408196;
     }
@@ -31,8 +37,8 @@
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: $regularSize;
   }
 
   .nav-first {
@@ -45,17 +51,18 @@
     display: flex;
     justify-content: space-evenly;
     width: 95%;
+    padding: .7rem 0 .7rem 0;
 
     a {
       color: white;
-      font-size: 20px;
-      font-weight: $boldSize;
+      font-size: 1rem;
+      font-weight: regularSize;
       text-decoration: none;
       list-style: none;
       display: block;
 
       &:hover {
-        color: #408196;
+        color: $textDark;
       }
     }
 
