@@ -3,7 +3,7 @@ import Movies from '../components/Movies';
 import { apiKey } from '../globals/globalVariables';
 import NavSort from '../components/NavSort';
 
-
+import Banner from '../components/Banner';
 
 
 
@@ -29,11 +29,9 @@ function PageHome({ sort, movie }) {
     return (
         <main>
 
-            <section>
-                <NavSort />
-                {moviesData !== null && <Movies movies={moviesData} />}
-
-            </section>
+                {/* <NavSort /> */}
+                
+                {moviesData !== null && <section><Banner movies={moviesData} /> <NavSort /> <Movies movies={moviesData} /></section>}
         </main>
     );
 }
