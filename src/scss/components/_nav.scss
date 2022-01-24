@@ -1,6 +1,6 @@
-.nav-main {
-  display: none;
-}
+// .nav-main {
+//   display: none;
+// }
 
 .nav-sort {
   list-style-type: none;
@@ -21,6 +21,83 @@
     }
   }
 }
+.main-nav {
+  width: 100%;
+  height: calc(100vh - 68px);
+  position: fixed;
+  left: 0;
+  top: 90px;
+  visibility: hidden;
+  background-color: black;
+  transition: visibility 0s 0.3s;
+
+  // width: 100%;
+  // background-color: $brandDark;
+  // height: 0;
+  // overflow: hidden;
+  // visibility: hidden;
+  // transition: height 0.5s ease, visibility 0s 0.5s;
+
+  .show & {
+    visibility: visible;
+    transition: visibility 0s;
+
+    // transition: height 0.5s ease, visibility 0s;
+    // visibility: visible;
+    // height: 159px;
+  }
+
+  ul {
+    @include flatten($is-list: true);
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 0 12px;
+    @at-root .main-nav li:first-child a {
+      border-top: 1px solid $brandDark; // this line is for the border for the li's
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: rgba(white, 0.2);
+    }
+  }
+
+  @media (min-width: 600px) {
+    height: auto;
+    visibility: visible;
+    transition: none;
+
+    .show & {
+      transition: none;
+      height: auto;
+    }
+
+    ul {
+      display: flex;
+    }
+
+    li {
+      flex: 1;
+    }
+
+    a {
+      padding: 0;
+      text-align: center;
+      border-top: none;
+      @at-root .main-nav li:not(:first-child) a {
+        border-top: none;
+        border-left: 3px solid grey;
+      }
+    }
+  }
+}
 
 // Webpage size
 @media (min-width: 768px) {
@@ -28,7 +105,7 @@
     list-style: none;
   }
 
-  .nav-main {
+  .main-nav {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;

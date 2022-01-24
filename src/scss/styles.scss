@@ -1,25 +1,26 @@
-//font 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap');
+//font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap");
 
 //Utilities
-@import './utilities/functions';
-@import './utilities/mixins';
-@import './utilities/utility-classes';
-@import './base/setting';
+@import "./utilities/functions";
+@import "./utilities/mixins";
+@import "./utilities/utility-classes";
+@import "./base/setting";
 
 //components
-@import './components/footer';
-@import './components/header';
-@import './components/nav';
-@import './components/wrapper';
-@import './components/movies';
-@import './components/body';
-@import './components/moviecard';
-@import './components/singleMovie';
-@import './components/favmoviecard';
-@import './components/favorites';
-@import './components/favButton';
+@import "./components/footer";
+@import "./components/header";
+@import "./components/nav";
+@import "./components/wrapper";
+@import "./components/movies";
+@import "./components/body";
+@import "./components/moviecard";
+@import "./components/singleMovie";
+@import "./components/favmoviecard";
+@import "./components/favorites";
+@import "./components/favButton";
+@import "./components/btn-nav";
 
 //Resets
-@import './base/reset';
-@import './base/type';
+@import "./base/reset";
+@import "./base/type";

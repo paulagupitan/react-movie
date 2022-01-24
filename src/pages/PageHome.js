@@ -2,16 +2,16 @@ import { useState, useEffect } from 'react';
 import Movies from '../components/Movies';
 import { apiKey } from '../globals/globalVariables';
 import NavSort from '../components/NavSort';
-import Banner from '../components/Banner';
+// import Banner from '../components/Banner';
 
 
 
 
 
-function PageHome({ sort, movies }) {
+function PageHome({ sort }) {
 
     const [moviesData, setMoviesData] = useState(null);
-    // const [banner, setBanner] = useState(null);
+    const [banner, setBanner] = useState(null);
 
     useEffect(() => {
 
@@ -39,15 +39,12 @@ function PageHome({ sort, movies }) {
     //     }
 
     //     fetchBanner();
-    // }, []);
+    // }, [sort]);
 
 
     return (
         <main>
             <section>
-                <Banner />
-                {/* {banner !== null && <Movies movies={moviesData} />} */}
-
                 <NavSort />
                 {moviesData !== null && <Movies movies={moviesData} />}
 
