@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 
-function Banner({ banner }) {
+function Banner({ movies }) {
 
     function dateFormat(string) {
         const date = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -10,17 +10,17 @@ function Banner({ banner }) {
 
     return (
         <div className="movie-card">
-            <div className="movie-backdrop">
-                <img className="backdrop-img" src={`https://image.tmdb.org/t/p/w500/${banner.backdrop_path}`} alt={banner.title} />
+            <div className="movie-poster">
+                <img src={`https://image.tmdb.org/t/p/original/${movies[0].backdrop_path}`} alt={movies[0].title} />
 
                 <div className="movie-info">
 
-                    <h3 className="movie-date">{dateFormat(banner.release_date)}</h3>
-                    <h3 className="movie-rating">{banner.vote_average}</h3>
-                    <h2>{banner.title}</h2>
-                    <p className="movie-overview">{banner.overview}</p>
+                    <h3 className="movie-date">{dateFormat(movies[0].release_date)}</h3>
+                    <h3 className="movie-rating">{movies[0].vote_average}</h3>
+                    <h2>{movies[0].title}</h2>
+                    <p className="movie-overview">{movies[0].overview}</p>
                     <div className="more-info-btn-container">
-                        <Link to={`/movie/${banner.id}`}><button className="more-info-btn">More Info</button></Link>
+                        <Link to={`/movie/${movies[0].id}`}><button className="more-info-btn">More Info</button></Link>
 
                     </div>
                 </div>
