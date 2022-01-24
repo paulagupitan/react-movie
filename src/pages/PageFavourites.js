@@ -31,7 +31,7 @@ function PageFavourites({ favourites, setFavourites }) {
         <main>
             <section className="fav-page">
 
-                {favourites ? favourites.map(movie => <FavCard favourites={favourites} setFavourites={setFavourites} key={movie.id} movie={movie} />) : <p>You do not have any favorite</p>}
+                {favourites ? favourites.map(movie => <FavCard favourites={favourites} setFavourites={setFavourites} key={movie.id} movie={movie} />) : <p> No fav movies </p>}
 
             </section>
         </main >

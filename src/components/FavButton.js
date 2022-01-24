@@ -5,8 +5,7 @@ function FavButton({ movie, favourites, setFavourites }) {
 
     const [fav, setFav] = useState(isFav(movie, favourites));
 
-    const [fav, setFav] = useState(isFav(movie));
-    const [favList, setFavList] = useState();
+
     let handleAddToFavs = () => {
         setFav(true);
         setFavourites([...favourites, movie]);
