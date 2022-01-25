@@ -82,17 +82,19 @@
 
     .movie-info-single {
         color: $textLight;
-        margin: 4rem auto;
+        margin: 3rem auto;
 
         @include mq(820px) {
             padding: 0 3rem;
             
             p {
+                font-size: .9rem;
                 display: -webkit-box;
                 -webkit-line-clamp: 6;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 }
+    
         }
         
         .release-runtime-vote {
@@ -108,6 +110,7 @@
                 // padding: 0.25rem 0.75rem;
                 padding: 10px 10px;
                 font-weight: $boldSize;
+                
             }
         }
         

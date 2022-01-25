@@ -1,14 +1,84 @@
-button.fav-button {
-    display: block;
-    margin: 2rem auto 0;
-    border: 1px solid $textLight;
-    border-radius: 10px;
-    background-color: $brandDark;
-    color: $textLight;
-    padding: 1rem 2rem;
-    font-size: 1rem;
+// button.fav-button {
+//     display: block;
+//     margin: 2rem auto 0;
+//     border: 1px solid $textLight;
+//     border-radius: 10px;
+//     background-color: $brandDark;
+//     color: $textLight;
+//     padding: 1rem 2rem;
+//     font-size: 1rem;
 
-    @include mq(820px) {
-        margin: 2rem 0 0;
+//     @include mq(820px) {
+//         margin: 2rem 0 0;
+//     }
+// }
+
+
+
+  // FIRST STYLE
+// button.fav-button {
+//     font-size: .8rem;
+//     padding: 1rem 1rem;
+//     width: 150px;
+//     border-radius: .7rem;
+//     background-color: transparent;
+//     color: #ffffff;
+//   }
+  
+//   button.fav-button {
+//     text-decoration: none;
+//     border: 1px solid white;
+//     position: relative;
+//     overflow: hidden;
+//   }
+  
+//   button.fav-button:hover {
+//     box-shadow: 2px 2px 25px 2px rgba(255, 255, 255, 0.4);
+//   }
+  
+//   button.fav-button:before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: -100%;
+//     width: 100%;
+//     height: 100%;
+//     background: linear-gradient(
+//       120deg,
+//       transparent,
+//       rgba(247, 247, 255, 0.4),
+//       transparent
+//     );
+//     transition: all 650ms;
+//   }
+  
+//   button.fav-button:hover:before {
+//     left: 100%;
+//   }
+
+button.fav-button {
+    box-sizing: border-box;
+    border: 1.5px solid white;
+    appearance: none;
+    font-size: .8rem;
+    padding: 1rem 1rem;
+    width: 150px;
+    border-radius: 1em;
+    background-color: transparent;
+    color: #ffffff;
+
+
+  
+    &:hover,
+    &:focus {
+      color: white;
+      outline: 0;
     }
-}
+  }
+  
+  button.fav-button {
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px $brandDark inset;
+    }
+  }
