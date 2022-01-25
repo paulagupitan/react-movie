@@ -25,6 +25,8 @@
         }
     }
 
+// fix how it looks on mobile: the poster takes up the whole width (at 320 * heights > 630)
+
     .poster-mobile {
         position: absolute;
         display: block;
@@ -105,7 +107,9 @@
                 border: 1px solid $textLight;
                 border-radius: 10px;
                 background-color: $bgDark;
-                padding: 0.25rem 0.75rem;
+                // padding: 0.25rem 0.75rem;
+                padding: 10px 10px;
+                font-weight: $boldSize;
             }
         }
         

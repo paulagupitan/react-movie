@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import FavButton from "./FavButton";
-
+import noPoster from '../images/no-movie-poster.jpg';
 function FavCard({ movie, favourites, setFavourites }) {
 
     function dateFormat(string) {
@@ -12,8 +12,10 @@ function FavCard({ movie, favourites, setFavourites }) {
 
         <div className="fav-card-container">
             <div className="fav-movie-poster">
-                <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
-
+                {movie.poster_path === null ?
+                    <img src={noPoster} alt="No poster available." /> :
+                    <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
+                }
                 <div className="fav-movie-info">
                     <h3 className="fav-movie-date">{dateFormat(movie.release_date)}</h3>
                     <h3 className="fav-movie-rating">{movie.vote_average}</h3>

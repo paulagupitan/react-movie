@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import noPoster from '../images/no-movie-poster.jpg';
 
 function MovieCard({ movie }) {
 
@@ -11,14 +12,16 @@ function MovieCard({ movie }) {
 
         <div className="movie-card-container">
             <div className="movie-poster">
-                <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
-
+                {movie.poster_path === null ?
+                    <img src={noPoster} alt="No poster available." /> :
+                    <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
+                }
                 <div className="movie-info">
                     <h3 className="movie-date">{dateFormat(movie.release_date)}</h3>
                     <h3 className="movie-rating">{movie.vote_average}</h3>
                     <h2>{movie.title}</h2>
                     <p className="movie-overview">{movie.overview}</p>
-                    <Link to={`/movie/${movie.id}`}><button className="more-info-btn">More Info</button></Link>
+                    <Link to={`/movie/${movie.id}`} className="more-info">More Info</Link>
                 </div>
             </div>
         </div>
