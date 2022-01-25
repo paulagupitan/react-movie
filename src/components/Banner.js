@@ -15,11 +15,11 @@ function Banner({ movies }) {
 
                 <div className="movie-info-banner">
 
-                    <h3 className="movie-date">{dateFormat(movies[0].release_date)}</h3>
-                    <h3 className="movie-rating">{movies[0].vote_average}</h3>
+                    <h3 className="movie-date-banner">{dateFormat(movies[0].release_date)}</h3>
+                    <h3 className="movie-rating-banner">{movies[0].vote_average}</h3>
                     <h2>{movies[0].title}</h2>
-                    <p className="movie-overview">{movies[0].overview}</p>
-                    <div className="more-info-btn-container">
+                    <p className="movie-overview-banner">{movies[0].overview}</p>
+                    <div className="more-info-btn-container-banner">
                         <Link to={`/movie/${movies[0].id}`}><button className="more-info-btn">More Info</button></Link>
                     </div>
                 </div>

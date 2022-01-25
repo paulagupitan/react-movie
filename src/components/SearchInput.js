@@ -6,12 +6,12 @@ function SearchInput() {
 
     return (
 
-        <div>
+        <div className="search">
 
-        <input className='search-bar' 
-        // type="text" value={this.state.value} 
-        // onChange={this.handleChange} 
-        placeholder='Search...' />
+            <input className='search-bar'
+                // type="text" value={this.state.value} 
+                // onChange={this.handleChange} 
+                placeholder='Search...' />
 
 
         </div>
@@ -19,13 +19,13 @@ function SearchInput() {
 
 
 
-    // <form onSubmit={this.handleSubmit}>
-    //     <label>
-    //       Search
-    //       <input className='search-bar' type="text" value={this.state.value} onChange={this.handleChange} placeholder='Search...' />
-    //     </label>
-    //     <input type="submit" value="Submit" />
-    // </form>
+        // <form onSubmit={this.handleSubmit}>
+        //     <label>
+        //       Search
+        //       <input className='search-bar' type="text" value={this.state.value} onChange={this.handleChange} placeholder='Search...' />
+        //     </label>
+        //     <input type="submit" value="Submit" />
+        // </form>
     )
 }
 

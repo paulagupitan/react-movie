@@ -1,12 +1,17 @@
 .search-bar {
-    border: 2px solid white;
-    border-radius: 20px;
-    width: 250px;
-    padding: 0.75rem 1rem;
-    background-color: $brandDark;
-    color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 250px;
+  padding: 0.5rem 1rem;
+  background-color: $brandDark;
+  color: white;
+  margin-top: 10px;
 }
 
 .search-bar:focus {
-    outline: none;
+  outline: none;
+}
+
+.search {
+  padding-left: 45px;
 }
