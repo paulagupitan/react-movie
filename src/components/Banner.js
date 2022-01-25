@@ -9,11 +9,11 @@ function Banner({ movies }) {
     }
 
     return (
-        <div className="movie-card">
-            <div className="movie-poster">
+        <div className="movie-banner">
+            <div className="drop">
                 <img src={`https://image.tmdb.org/t/p/original/${movies[0].backdrop_path}`} alt={movies[0].title} />
 
-                <div className="movie-info">
+                <div className="movie-info-banner">
 
                     <h3 className="movie-date">{dateFormat(movies[0].release_date)}</h3>
                     <h3 className="movie-rating">{movies[0].vote_average}</h3>
@@ -21,13 +21,12 @@ function Banner({ movies }) {
                     <p className="movie-overview">{movies[0].overview}</p>
                     <div className="more-info-btn-container">
                         <Link to={`/movie/${movies[0].id}`}><button className="more-info-btn">More Info</button></Link>
-
                     </div>
                 </div>
             </div>
 
 
-        </div>
+        </div >
     )
 
 }

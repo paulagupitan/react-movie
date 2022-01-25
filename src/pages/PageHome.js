@@ -29,9 +29,9 @@ function PageHome({ sort, movie }) {
     return (
         <main>
 
-                {/* <NavSort /> */}
-                
-                {moviesData !== null && <section><Banner movies={moviesData} /> <NavSort /> <Movies movies={moviesData} /></section>}
+            {/* <NavSort /> */}
+
+            {moviesData !== null && <section><Banner movies={moviesData} /> <NavSort /> <Movies movies={moviesData} /></section>}
         </main>
     );
 }

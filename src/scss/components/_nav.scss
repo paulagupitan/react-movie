@@ -1,6 +1,4 @@
-// .nav-main {
-//   display: none;
-// }
+// Sorting Menu
 
 .nav-sort {
   list-style-type: none;
@@ -21,30 +19,30 @@
     }
   }
 }
-.main-nav {
-  width: 100%;
-  height: calc(100vh - 68px);
-  position: fixed;
-  left: 0;
-  top: 90px;
-  visibility: hidden;
-  background-color: black;
-  transition: visibility 0s 0.3s;
 
+// Main nav
+.main-nav {
   // width: 100%;
-  // background-color: $brandDark;
-  // height: 0;
-  // overflow: hidden;
+  height: calc(10vh - 68px);
+  position: relative;
+  // left: 0;
+  // top: 90px;
   // visibility: hidden;
-  // transition: height 0.5s ease, visibility 0s 0.5s;
+  // background-color: red;
+  // transition: visibility 0s 0.3s;
+
+  width: 100%;
+  background-color: $brandDark;
+  // height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: height 0.5s ease, visibility 0s 0.5s;
 
   .show & {
+    transition: height 0.5s ease, visibility 0s;
     visibility: visible;
-    transition: visibility 0s;
-
-    // transition: height 0.5s ease, visibility 0s;
-    // visibility: visible;
-    // height: 159px;
+    height: 159px;
+    // transform: translateX(80%);s
   }
 
   ul {
@@ -69,53 +67,54 @@
     }
   }
 
-  @media (min-width: 600px) {
-    height: auto;
-    visibility: visible;
-    transition: none;
+  // @media (min-width: 600px) {
+  //   height: auto;
+  //   visibility: visible;
+  //   transition: none;
 
-    .show & {
-      transition: none;
-      height: auto;
-    }
+  //   .show & {
+  //     transition: none;
+  //     height: auto;
+  //   }
 
-    ul {
-      display: flex;
-    }
+  //   ul {
+  //     display: flex;
+  //   }
 
-    li {
-      flex: 1;
-    }
+  //   li {
+  //     flex: 1;
+  //   }
 
-    a {
-      padding: 0;
-      text-align: center;
-      border-top: none;
-      @at-root .main-nav li:not(:first-child) a {
-        border-top: none;
-        border-left: 3px solid grey;
-      }
-    }
-  }
+  //   a {
+  //     padding: 0;
+  //     text-align: center;
+  //     border-top: none;
+  //     @at-root .main-nav li:not(:first-child) a {
+  //       border-top: none;
+  //       border-left: 3px solid grey;
+  //     }
+  //   }
+  // }
 }
 
 // Webpage size
-@media (min-width: 768px) {
-  nav ul {
-    list-style: none;
-  }
-
+@media (min-width: 600px) {
   .main-nav {
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
+    visibility: visible;
     font-size: 20px;
     font-weight: 600;
-  }
+    height: 20vh;
 
-  .nav-first {
-    margin-right: 1rem;
-    width: 35%;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      height: 100px;
+      margin-right: 20px;
+    }
+    .show {
+      transition: none;
+      height: auto;
+    }
   }
 
   .nav-sort {

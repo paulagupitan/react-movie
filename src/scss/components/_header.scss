@@ -1,13 +1,15 @@
 // Header
 header {
   background-color: $brandDark;
-  padding: 0;
+  padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  min-height: 80px;
   img {
     width: 150px;
+    display: block;
   }
 
   h1 {
@@ -19,34 +21,19 @@ header {
       color: black;
     }
   }
+  @media (min-width: 600px) {
+    header {
+      // flex-wrap: nowrap;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // z-index: 2;
+      // width: 100%;
+
+      img {
+        padding-bottom: 0;
+        margin: 15px 35px;
+      }
+    }
+  }
 }
-
-// header {
-//   color: white;
-//   font-family: $textFont;
-//   background-color: $brandDark;
-//   padding: 2rem;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   min-height: 50px;
-
-//   img {
-//     width: 170px;
-//   }
-//   h1 {
-//     color: white;
-//   }
-
-//   a {
-//     color: white;
-//     text-decoration: none;
-//   }
-//   .user {
-//     text-align: right;
-//   }
-
-//   p {
-//     margin-bottom: 8px;
-//   }
-// }
