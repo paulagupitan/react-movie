@@ -25,6 +25,8 @@
         }
     }
 
+// fix how it looks on mobile: the poster takes up the whole width (at 320 * heights > 630)
+
     .poster-mobile {
         position: absolute;
         display: block;

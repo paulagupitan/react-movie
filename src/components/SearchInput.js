@@ -1,13 +1,31 @@
-function SearchInput({value, setSearchValue}) {
+// import { useState } from 'react';
+
+function SearchInput() {
+
+    // const [searchValue, setSearchValue] = useState('');
+
     return (
+
         <div>
-            <input
-				className='search-bar'
-				value={value}
-				onChange={(event) => setSearchValue(event.target.value)}
-				placeholder='Search...'
-			></input>
+
+        <input className='search-bar' 
+        // type="text" value={this.state.value} 
+        // onChange={this.handleChange} 
+        placeholder='Search...' />
+
+
         </div>
+
+
+
+
+    // <form onSubmit={this.handleSubmit}>
+    //     <label>
+    //       Search
+    //       <input className='search-bar' type="text" value={this.state.value} onChange={this.handleChange} placeholder='Search...' />
+    //     </label>
+    //     <input type="submit" value="Submit" />
+    // </form>
     )
 }
 
