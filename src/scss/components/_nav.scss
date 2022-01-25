@@ -23,31 +23,29 @@
 
 // Main nav
 .main-nav {
-  // width: 100%;
-  height: calc(10vh - 68px);
-  position: relative;
-  // left: 0;
-  // top: 90px;
-  // visibility: hidden;
-  // background-color: red;
-  // transition: visibility 0s 0.3s;
-
   width: 100%;
-  background-color: $brandDark;
-  // height: 0;
-  overflow: hidden;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 2px;
   visibility: hidden;
-  transition: height 0.5s ease, visibility 0s 0.5s;
+  z-index: 20;
+  transition: visibility 0s 0.3s;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   .show & {
-    transition: height 0.5s ease, visibility 0s;
     visibility: visible;
-    height: 159px;
-    // transform: translateX(80%);s
+    transition: visibility 0s;
+    transition: transform 0.3s ease;
   }
 
   ul {
     @include flatten($is-list: true);
+    position: absolute;
+    top: 89px;
+    left: 0;
+    right: 0;
   }
   a {
     color: white;
@@ -55,69 +53,37 @@
     display: block;
     line-height: 50px;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: bold;
-    padding: 0 12px;
-    @at-root .main-nav li:first-child a {
-      border-top: 1px solid $brandDark; // this line is for the border for the li's
-    }
+    padding: 13px 12px;
+
     &:hover,
     &:focus,
     &:active {
       background-color: rgba(white, 0.2);
     }
   }
-
-  // @media (min-width: 600px) {
-  //   height: auto;
-  //   visibility: visible;
-  //   transition: none;
-
-  //   .show & {
-  //     transition: none;
-  //     height: auto;
-  //   }
-
-  //   ul {
-  //     display: flex;
-  //   }
-
-  //   li {
-  //     flex: 1;
-  //   }
-
-  //   a {
-  //     padding: 0;
-  //     text-align: center;
-  //     border-top: none;
-  //     @at-root .main-nav li:not(:first-child) a {
-  //       border-top: none;
-  //       border-left: 3px solid grey;
-  //     }
-  //   }
-  // }
 }
 
 // Webpage size
-@media (min-width: 600px) {
+@media (min-width: 720px) {
   .main-nav {
     visibility: visible;
     font-size: 20px;
     font-weight: 600;
-    height: 20vh;
+    backdrop-filter: blur(0px);
 
     ul {
       display: flex;
+      flex-wrap: nowrap;
+      // flex-flow: flex-end;
       justify-content: flex-end;
-      height: 100px;
-      margin-right: 20px;
-    }
-    .show {
-      transition: none;
-      height: auto;
+      width: 50%;
+      top: 0px;
+      left: 370px;
+      font-size: 12px;
     }
   }
-
   .nav-sort {
     font-size: 18px;
     display: flex;
@@ -143,6 +109,17 @@
         display: flex;
         justify-content: right;
       }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-nav {
+    ul {
+      width: 60%;
+      top: 0px;
+      left: 400px;
+      font-size: 12px;
     }
   }
 }

@@ -4,7 +4,8 @@
   @include flatten;
   border: none;
   background: none;
-  margin-right: em(12);
+  z-index: 100;
+  // margin-right: em(12);
 
   &:hover {
     cursor: pointer;
@@ -42,7 +43,7 @@
     transform: rotate(45deg);
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 720px) {
     display: none;
   }
 }
