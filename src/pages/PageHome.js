@@ -5,6 +5,7 @@ import NavSort from '../components/NavSort';
 
 import Banner from '../components/Banner';
 
+import SearchInput from '../components/SearchInput';
 
 
 function PageHome({ sort, movie }) {
@@ -31,7 +32,9 @@ function PageHome({ sort, movie }) {
 
                 {/* <NavSort /> */}
                 
-                {moviesData !== null && <section><Banner movies={moviesData} /> <NavSort /> <Movies movies={moviesData} /></section>}
+                {moviesData !== null && <section><Banner movies={moviesData} /> 
+                <SearchInput /> 
+                <NavSort /> <Movies movies={moviesData} /></section>}
         </main>
     );
 }
