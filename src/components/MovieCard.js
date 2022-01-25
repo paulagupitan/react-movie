@@ -21,7 +21,7 @@ function MovieCard({ movie }) {
                     <h3 className="movie-rating">{movie.vote_average}</h3>
                     <h2>{movie.title}</h2>
                     <p className="movie-overview">{movie.overview}</p>
-                    <Link to={`/movie/${movie.id}`}><button className="more-info-btn">More Info</button></Link>
+                    <Link to={`/movie/${movie.id}`} className="more-info">More Info</Link>
                 </div>
             </div>
         </div>
