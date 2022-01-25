@@ -1,12 +1,58 @@
 .search-bar {
-    border: 2px solid white;
-    border-radius: 20px;
-    width: 250px;
+    border: 0.125rem solid white;
+    border-radius: 1.25rem;
+    width: 15.625rem;
     padding: 0.75rem 1rem;
     background-color: $brandDark;
-    color: white;
+    color: $textLight;
 }
 
 .search-bar:focus {
     outline: none;
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $textLight;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $textLight;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $textLight;
+  }
+
+.page-search {
+    // the footer gets pushed to the top when the content isnt enough to fill the page...but we want the footer to show at the bottom (ideally just within viewport height) if there is enough room
+
+    p {
+        text-align: center;
+    }
+}
+
+.page-search-header {
+    text-align: center;
+    margin: 1rem;
+
+    @include mq(1000px){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 2rem 1rem;
+
+        .search-form {
+            justify-self: end;
+        }
+    }
+
+    .search-results {
+        margin-top: 1rem;
+
+        @include mq(1000px){
+            grid-column: 2 / 4;
+            margin: 0 auto;
+            align-self: center;
+         }
+    }
+}
+  

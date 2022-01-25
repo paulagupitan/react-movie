@@ -5,26 +5,41 @@ import SearchInput from '../components/SearchInput';
 
 function PageSearch() {
 
+    const { search } = window.location;
+    const query = new URLSearchParams(search).get('search');
+
     const [movieSearchData, setMovieSearchData] = useState(null);
 
     useEffect( () => {
         const getMovie = async () => {
-            const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=spiderman&page=1&include_adult=false`);
+            const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${query}&page=1&include_adult=false`);
             let movieSearchDataFromAPI = await res.json();
-            movieSearchDataFromAPI = movieSearchDataFromAPI.results.splice(0, 15);
+            
+            movieSearchDataFromAPI = movieSearchDataFromAPI.results.splice(0, 24);
             setMovieSearchData(movieSearchDataFromAPI);
         }
 
         getMovie();
     },[])
 
+
     return (
         <main>  
-                {movieSearchData !== null && <section> 
+                {movieSearchData !== null && 
+                
+                    <section className="page-search"> 
+                        <div className="page-search-header">
+                        <SearchInput />
+                        <h2 className="search-results">Search results for: "{query}" </h2>
+                        </div>
+
+                        { movieSearchData.length > 0 ? 
+                        <Movies movies={movieSearchData} /> : <p>No results found.</p>}
+
+                        {/* <Movies movies={movieSearchData} /> */}
+                    </section>  
                     
-                    <h2>Results for: </h2>
-                    
-                    <SearchInput /> <Movies movies={movieSearchData} /></section>}
+                }
 
         </main>
     )
