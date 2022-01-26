@@ -1,6 +1,6 @@
-// import { useState } from 'react';
+import { useState, useHistory } from 'react';
 
-function SearchInput() {
+function SearchInput({query}) {
 
     // const [searchValue, setSearchValue] = useState('');
 
@@ -8,24 +8,21 @@ function SearchInput() {
 
         <div className="search">
 
-            <input className='search-bar'
-                // type="text" value={this.state.value} 
-                // onChange={this.handleChange} 
-                placeholder='Search...' />
 
 
+       
+
+          <form className="search-form" action="/search" method="get">
+
+              <label className="sr-only">Search</label>
+              <input className='search-bar' 
+              type="text" 
+              name="search"
+              value={query}
+              placeholder='Search...' />
+
+            </form>
         </div>
-
-
-
-
-        // <form onSubmit={this.handleSubmit}>
-        //     <label>
-        //       Search
-        //       <input className='search-bar' type="text" value={this.state.value} onChange={this.handleChange} placeholder='Search...' />
-        //     </label>
-        //     <input type="submit" value="Submit" />
-        // </form>
     )
 }
 

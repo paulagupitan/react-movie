@@ -8,14 +8,61 @@
   margin-top: 10px;
 }
 
-.search-bar:focus {
-  outline: none;
-}
-
 .search {
   padding: 2px 40px 1px 40px;
 }
 
-::placeholder {
-  color: #999999;
+.search-bar:focus {
+    outline: none;
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #999999;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $textLight;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $textLight;
+  }
+
+.page-search {
+    
+    // the footer gets pushed to the top when the content isnt enough to fill the page...but we want the footer to show at the bottom (ideally just within viewport height) if there is enough room
+
+    .no-result {
+        font-size: 1.25rem;
+        padding-top: 5rem;
+        height: 50vh;
+        text-align: center;
+    }
+}
+
+
+.page-search-header {
+    text-align: center;
+    margin: 1rem;
+
+    @include mq(1000px){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 2rem 1rem;
+
+        .search-form {
+            justify-self: end;
+        }
+    }
+
+    .search-results {
+        margin-top: 1rem;
+
+        @include mq(1000px){
+            grid-column: 2 / 4;
+            margin: 0 auto;
+            align-self: center;
+         }
+    }
+}
+

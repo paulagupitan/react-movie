@@ -11,13 +11,14 @@ function IndividualMovie( {favourites, setFavourites} ) {
 
     useEffect( () => {
         const getMovie = async () => {
-            const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`);
+            const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US&append_to_response=videos
+            `);
             const moviesDataFromAPI = await res.json();
             setMovie(moviesDataFromAPI);
         }
 
         getMovie();
-    },)
+    },[])
 
     return (
         <section>
