@@ -4,7 +4,7 @@
 function PageAbout() {
 
     return (
-        <main>
+        <>
             <section className="about-page">
                 <h2>Let's talk about XTRAMOV!E </h2>
                 <p>The XTRAMOV!E movie database is a website where users can find popular, top rated, now playing and upcoming movie listings.</p>
@@ -12,7 +12,7 @@ function PageAbout() {
                 <p>Found something you like? Add them to your favourites and remove any item anytime.</p>
                 <p>This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
             </section>
-        </main>
+        </>
     );
 
 }

@@ -6,16 +6,23 @@ function SearchInput({query}) {
 
     return (
 
-        <form className="search-form" action="/search" method="get">
+        <div className="search">
 
-            <label className="sr-only">Search</label>
-            <input className='search-bar' 
-            type="text" 
-            name="search"
-            value={query}
-            placeholder='Search...' />
 
-        </form>
+
+       
+
+          <form className="search-form" action="/search" method="get">
+
+              <label className="sr-only">Search</label>
+              <input className='search-bar' 
+              type="text" 
+              name="search"
+              value={query}
+              placeholder='Search...' />
+
+            </form>
+        </div>
     )
 }
 

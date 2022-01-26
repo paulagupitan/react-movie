@@ -4,6 +4,7 @@ body {
   color: $textLight;
   font-family: $textFont;
 }
+//animation for nav bar
 
 .fav-page {
   min-height: 70vh;
@@ -13,8 +14,13 @@ body {
 }
 
 .about-page {
+  padding: 10rem 2rem 0rem 2rem;
   min-height: 70vh;
-  margin: 0 auto;
   text-align: center;
-  padding-top: 18rem;
+  font-size: 12px;
+  @media (min-width: 800px) {
+    margin: 0 auto;
+    font-size: 16px;
+    // padding-top: 15rem;
+  }
 }

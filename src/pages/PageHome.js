@@ -30,10 +30,10 @@ function PageHome({ sort, movie }) {
     return (
         <main>
 
-                {/* <NavSort /> */}
-                
-                {moviesData !== null && <section><Banner movies={moviesData} /> 
-                <SearchInput /> 
+            {/* <NavSort /> */}
+
+            {moviesData !== null && <section><Banner movies={moviesData} />
+                <SearchInput />
                 <NavSort /> <Movies movies={moviesData} /></section>}
         </main>
     );

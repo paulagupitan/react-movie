@@ -1,17 +1,22 @@
 .search-bar {
-    border: 0.125rem solid white;
-    border-radius: 1.25rem;
-    width: 15.625rem;
-    padding: 0.75rem 1rem;
-    background-color: $brandDark;
-    color: $textLight;
+  border: 1px solid #8196a4;
+  border-radius: 10px;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #151c27;
+  color: white;
+  margin-top: 10px;
+}
+
+.search {
+  padding: 2px 40px 1px 40px;
 }
 
 .search-bar:focus {
     outline: none;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: $textLight;
+    color: #999999;
     opacity: 1; /* Firefox */
   }
   
@@ -60,4 +65,4 @@
          }
     }
 }
-  
+

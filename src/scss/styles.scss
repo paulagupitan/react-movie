@@ -1,11 +1,11 @@
-//font 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap');
+//font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap");
 
 //Utilities
-@import './utilities/functions';
-@import './utilities/mixins';
-@import './utilities/utility-classes';
-@import './base/setting';
+@import "./utilities/functions";
+@import "./utilities/mixins";
+@import "./utilities/utility-classes";
+@import "./base/setting";
 
 //components
 @import './components/footer';
@@ -21,7 +21,9 @@
 @import './components/favButton';
 @import './components/search';
 @import './components/trailer';
+@import "./components/movie-banner";
+@import "./components/btn-nav";
 
 //Resets
-@import './base/reset';
-@import './base/type';
+@import "./base/reset";
+@import "./base/type";
