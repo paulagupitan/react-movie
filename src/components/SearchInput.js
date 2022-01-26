@@ -1,31 +1,21 @@
-// import { useState } from 'react';
+import { useState, useHistory } from 'react';
 
-function SearchInput() {
+function SearchInput({query}) {
 
     // const [searchValue, setSearchValue] = useState('');
 
     return (
 
-        <div>
+        <form className="search-form" action="/search" method="get">
 
-        <input className='search-bar' 
-        // type="text" value={this.state.value} 
-        // onChange={this.handleChange} 
-        placeholder='Search...' />
+            <label className="sr-only">Search</label>
+            <input className='search-bar' 
+            type="text" 
+            name="search"
+            value={query}
+            placeholder='Search...' />
 
-
-        </div>
-
-
-
-
-    // <form onSubmit={this.handleSubmit}>
-    //     <label>
-    //       Search
-    //       <input className='search-bar' type="text" value={this.state.value} onChange={this.handleChange} placeholder='Search...' />
-    //     </label>
-    //     <input type="submit" value="Submit" />
-    // </form>
+        </form>
     )
 }
 
