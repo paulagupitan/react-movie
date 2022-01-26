@@ -3,13 +3,9 @@ header {
   background-color: $brandDark;
   padding: 1em 1.5em 1em 1.5em;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  // position: sticky;
-  // z-index: 30;
-
   img {
     margin-top: 7px;
     width: 160px;

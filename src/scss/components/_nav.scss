@@ -32,8 +32,9 @@
   visibility: hidden;
   z-index: 20;
   transition: visibility 0s 0.3s;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding-top: 5rem;
 
   .show & {
     visibility: visible;
@@ -43,7 +44,6 @@
 
   ul {
     @include flatten($is-list: true);
-    position: absolute;
     top: 89px;
     left: 0;
     right: 0;
@@ -55,7 +55,6 @@
     line-height: 50px;
     text-align: center;
     font-size: 1.5em;
-    font-weight: bold;
     padding: 13px 12px;
 
     &:hover,
@@ -69,20 +68,17 @@
 // Webpage size
 @media (min-width: 720px) {
   .main-nav {
-    visibility: visible;
-    font-size: 20px;
-    font-weight: 600;
+    position: static;
+    // visibility: visible;
+    // font-size: 20px;
+    // font-weight: 600;
     backdrop-filter: blur(0px);
-    // position: relative;
+    // display: grid;
 
-    ul {
+    li {
       display: flex;
-      flex-wrap: nowrap;
-      // flex-flow: flex-end;
+      flex-direction: column;
       justify-content: flex-end;
-      width: 50%;
-      top: 0px;
-      left: 370px;
       font-size: 12px;
     }
   }
@@ -108,8 +104,8 @@
 
     @media (min-width: 820px) {
       a {
-        display: flex;
-        justify-content: right;
+        // display: flex;
+        // justify-content: right;
       }
     }
   }

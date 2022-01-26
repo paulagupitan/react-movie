@@ -1,9 +1,9 @@
 .search-bar {
-  border: 2px solid white;
-  border-radius: 20px;
-  width: 250px;
+  border: 1px solid #8196a4;
+  border-radius: 10px;
+  width: 100%;
   padding: 0.5rem 1rem;
-  background-color: $brandDark;
+  background-color: #151c27;
   color: white;
   margin-top: 10px;
 }
@@ -13,5 +13,9 @@
 }
 
 .search {
-  padding-left: 45px;
+  padding: 2px 40px 1px 40px;
+}
+
+::placeholder {
+  color: #999999;
 }
