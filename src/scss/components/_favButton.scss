@@ -56,29 +56,121 @@
 //     left: 100%;
 //   }
 
-button.fav-button {
-    box-sizing: border-box;
-    border: 1.5px solid white;
-    appearance: none;
-    font-size: .8rem;
-    padding: 1rem 1rem;
-    width: 150px;
-    border-radius: 1em;
-    background-color: transparent;
-    color: #ffffff;
+// SECOND BUTTON
+// button.fav-button {
+//     box-sizing: border-box;
+//     border: 1.5px solid white;
+//     appearance: none;
+//     font-size: .8rem;
+//     padding: 1rem 1rem;
+//     width: 150px;
+//     border-radius: 1em;
+//     background-color: transparent;
+//     color: #ffffff;
 
 
   
-    &:hover,
-    &:focus {
-      color: white;
-      outline: 0;
-    }
-  }
+//     &:hover,
+//     &:focus {
+//       color: white;
+//       outline: 0;
+//     }
+//   }
   
-  button.fav-button {
-    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-    &:hover {
-      box-shadow: 0 0 40px 40px $brandDark inset;
-    }
-  }
+//   button.fav-button {
+//     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+//     &:hover {
+//       box-shadow: 0 0 40px 40px $brandDark inset;
+//     }
+//   }
+
+.circle{
+  height:50px;
+  width:50px;
+  background-color: transparent;
+  border: 1px solid white;
+  position: relative;
+  border-radius: 50%;
+}
+
+.circle:hover .heart, .circle:hover .heart:before, .circle:hover .heart:after{
+  background-color: $textDark;
+}
+
+.circle:active{
+  transform: translateY(5px);
+  background-color: $textDark;
+}
+
+
+
+.heart{
+  height:15px;
+  width: 15px;
+  background-color: white;
+  transform: rotate(45deg);
+  position: relative;
+  top: 40%;
+  left:33%;
+}
+
+.heart:before{
+  height:100%;
+  width: 100%;
+  background-color: white;
+  transform: translateX(-50%);
+  position: absolute;
+  top:0px;
+  bottom: 0px;
+  border-radius: 50%;
+  content: '';
+}
+
+.heart:after{
+  height:100%;
+  width: 100%;
+  background-color: white;
+  transform: translateY(-50%);
+  position: absolute;
+  top:0px;
+  bottom: 0px;
+  border-radius: 50%;
+  content: '';
+}
+
+
+//unheart
+
+.unheart{
+  height:15px;
+  width: 15px;
+  background-color: $textDark;
+  transform: rotate(45deg);
+  position: relative;
+  top: 40%;
+  left:33%;
+}
+
+.unheart:before{
+  height:100%;
+  width: 100%;
+  background-color: $textDark;
+  transform: translateX(-50%);
+  position: absolute;
+  top:0px;
+  bottom: 0px;
+  border-radius: 50%;
+  content: '';
+}
+
+.unheart:after{
+  height:100%;
+  width: 100%;
+  background-color: $textDark;
+  transform: translateY(-50%);
+  position: absolute;
+  top:0px;
+  bottom: 0px;
+  border-radius: 50%;
+  content: '';
+}
