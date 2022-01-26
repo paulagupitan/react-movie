@@ -38,6 +38,7 @@ function SingleMovie({ movie, favourites, setFavourites }) {
                     <p>{movie.overview}</p>
                     <p>Genre: {movie.genres[0].name}</p>
                     <FavButton favourites={favourites} setFavourites={setFavourites} movie={movie} />
+                    <button>play trailer</button>
                 </div>
             </div>
         </div>
