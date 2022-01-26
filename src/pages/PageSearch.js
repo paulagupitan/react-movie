@@ -20,12 +20,12 @@ function PageSearch() {
         }
 
         getMovie();
-    },[])
+    },[query])
 
 
     return (
         <main>  
-                {movieSearchData !== null && 
+                {movieSearchData !== null &&
                 
                     <section className="page-search"> 
                         <div className="page-search-header">
@@ -34,11 +34,10 @@ function PageSearch() {
                         </div>
 
                         { movieSearchData.length > 0 ? 
-                        <Movies movies={movieSearchData} /> : <p>No results found.</p>}
+                        <Movies movies={movieSearchData} /> : <p className="no-result">No results found.</p>}
 
                         {/* <Movies movies={movieSearchData} /> */}
                     </section>  
-                    
                 }
 
         </main>

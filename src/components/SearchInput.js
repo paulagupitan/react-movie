@@ -1,6 +1,6 @@
 import { useState, useHistory } from 'react';
 
-function SearchInput() {
+function SearchInput({query}) {
 
     // const [searchValue, setSearchValue] = useState('');
 
@@ -12,7 +12,7 @@ function SearchInput() {
             <input className='search-bar' 
             type="text" 
             name="search"
-            // value={searchValue}
+            value={query}
             placeholder='Search...' />
 
         </form>
