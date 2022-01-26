@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import { GlobalProvider } from '../context/GlobalState';
 import Header from '../components/Header';
-// import { appTitle, appAuthor } from '../globals/globalVariables';
 import Footer from '../components/Footer';
 import PageHome from '../pages/PageHome';
 import PageAbout from '../pages/PageAbout';
@@ -12,7 +10,6 @@ import PageSearch from '../pages/PageSearch';
 import PageNotFound from '../pages/PageNotFound';
 import { getFavs } from "../utilities/storage";
 import { useEffect, useState } from "react";
-// import Sidebar from "../components/Sidebar";
 
 function AppRouter() {
 
@@ -29,8 +26,6 @@ function AppRouter() {
 
       <BrowserRouter>
         <Header />
-        {/* <Sidebar /> */}
-
         <Routes>
           <Route path="/" element={<PageHome sort="popular" />} />
           <Route path="/sort/popular" element={<PageHome sort="popular" />} />

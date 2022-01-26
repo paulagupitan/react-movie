@@ -20,13 +20,9 @@ function FavButton({ movie, favourites, setFavourites }) {
     return (
         <div className="circle">
             {fav === false ?
-                // <button className="fav-button" onClick={handleAddToFavs}>Add to Favourites</button> :
-                // <button className="fav-button" onClick={handleRemoveFromFavs}>Remove from Favourites</button>
-                <div class="heart" onClick={handleAddToFavs}></div> :
-                <div class="unheart" onClick={handleRemoveFromFavs}></div>
+                <div class="heart fav" onClick={handleAddToFavs}></div> :
+                <div class="unheart not-fav" onClick={handleRemoveFromFavs}></div>
             }
-
-
         </div>
     )
 }

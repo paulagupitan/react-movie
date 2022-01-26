@@ -3,6 +3,7 @@
   grid-template-columns: 1fr;
   grid-gap: 1.5em;
   padding: 1.5em;
+  
 
   @media (min-width: 576px) {
     display: grid;
@@ -11,6 +12,7 @@
 
 
     padding: 0 1.5em 3em 1.5em;
+  }
 
 @media (min-width: 576px) {
         display: grid;

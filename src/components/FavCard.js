@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import FavButton from "./FavButton";
 import noPoster from '../images/no-movie-poster.jpg';
 function FavCard({ movie, favourites, setFavourites }) {

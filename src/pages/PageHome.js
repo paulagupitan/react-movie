@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react';
 import Movies from '../components/Movies';
 import { apiKey } from '../globals/globalVariables';
 import NavSort from '../components/NavSort';
-
 import Banner from '../components/Banner';
-
 import SearchInput from '../components/SearchInput';
 
 
@@ -29,9 +27,6 @@ function PageHome({ sort, movie }) {
 
     return (
         <main>
-
-            {/* <NavSort /> */}
-
             {moviesData !== null && <section><Banner movies={moviesData} />
                 <SearchInput />
                 <NavSort /> <Movies movies={moviesData} /></section>}

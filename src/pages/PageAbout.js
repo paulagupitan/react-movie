@@ -1,8 +1,4 @@
-
-
-
 function PageAbout() {
-
     return (
         <>
             <section className="about-page">
