@@ -1,5 +1,4 @@
 import FavButton from "./FavButton";
-import Trailer from "./Trailer";
 
 function SingleMovie({ movie, favourites, setFavourites }) {
 
@@ -16,7 +15,6 @@ function SingleMovie({ movie, favourites, setFavourites }) {
         return timeInHrMin;
     }
 
-    console.log(movie);
 
 
     return (
@@ -38,15 +36,10 @@ function SingleMovie({ movie, favourites, setFavourites }) {
                     </div>
                     <h2>{movie.title}</h2>
                     <p>{movie.overview}</p>
-                    {/* need to get all the genres, not just the first one */}
-                    <p>Genre: {movie.genres[0].name}</p>
 
-                    {movie.videos.results.length > 0 && <Trailer movie={movie} />}
+                    <p>Genre: {movie.genres.map(genres => genres.name).join(",")}</p>
+                    <div className="fav"><FavButton favourites={favourites} setFavourites={setFavourites} movie={movie} /></div>
 
-{/*                     
-                    <iframe width="560" height="315" src={`https://www.youtube.com/embed/${movie.videos.results[0].key}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-
-                    <FavButton favourites={favourites} setFavourites={setFavourites} movie={movie} />
                     <button>play trailer</button>
                 </div>
             </div>

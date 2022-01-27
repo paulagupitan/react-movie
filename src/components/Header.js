@@ -27,7 +27,7 @@ const Header = () => {
 
     return (
         <header className={navOpen ? 'show' : undefined}>
-           <h1><Link className="logo" to={'/'}><img className="header-logo" src={logo} alt="Logo" /></Link></h1>
+           <Link className="logo" to={'/'}><img className="header-logo" src={logo} alt="Logo" /></Link>
             <button className="btn-main-nav" 
                     onMouseDown={(e) => { e.preventDefault(); }}
                     onClick={showHideNav}>

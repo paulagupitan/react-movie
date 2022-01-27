@@ -38,7 +38,7 @@ function Trailer({movie}) {
 
     return (
         <div>
-              
+
             {trailerOpen ?
             
             <div>
@@ -49,11 +49,10 @@ function Trailer({movie}) {
                     <div className="video-iframe-container">
                         <iframe width="560" height="315" src={`https://www.youtube.com/embed/${movie.videos.results[0].key}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> 
                     </div>
-                </div>
-            </div> :
-            
-            
-            <button className="trailer-button" onMouseDown={(e)=>{e.preventDefault();}} onClick={handleClickTrailer}>Trailer</button> }
+                </div> :
+
+
+                <button className="trailer-button" onMouseDown={(e) => { e.preventDefault(); }} onClick={handleClickTrailer}>Trailer</button>}
 
         </div>
     )
