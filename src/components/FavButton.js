@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { isFav, addToFavs, removeFromFavs } from '../utilities/storage';
+import whiteHeart from '../images/heart-white.png';
+import blueHeart from '../images/blue-heart.png';
 
 function FavButton({ movie, favourites, setFavourites }) {
 
@@ -18,10 +20,10 @@ function FavButton({ movie, favourites, setFavourites }) {
     }
 
     return (
-        <div className="circle">
+        <div className="fav-button">
             {fav === false ?
-                <div class="heart fav" onClick={handleAddToFavs}></div> :
-                <div class="unheart not-fav" onClick={handleRemoveFromFavs}></div>
+                <img src={whiteHeart} alt="add to favorites" onClick={handleAddToFavs} /> :
+                <img src={blueHeart} alt="remove to favorites" onClick={handleRemoveFromFavs} />
             }
         </div>
     )
