@@ -14,6 +14,11 @@ html {
       max-width: 100%;
       height: auto;
   }
+
+  embed,
+  iframe {
+      max-width: 90%;
+  }
   
   table {
       border-collapse: collapse;

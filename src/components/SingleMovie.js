@@ -5,6 +5,8 @@ import Trailer from './Trailer';
 
 function SingleMovie({ movie, favourites, setFavourites }) {
 
+    console.log(movie);
+
     return (
         <div className="movie-card-single">
             <div className="movie-backdrop">
