@@ -19,6 +19,13 @@
     justify-content: left;
     opacity: 0;
     transition: opacity 0.25s;
+
+    .fav-button {
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        margin-top: 4rem;
+    }
 }
 
 .fav-movie-info:hover {

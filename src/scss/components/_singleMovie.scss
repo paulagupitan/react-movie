@@ -116,6 +116,11 @@
             }
         }
         
+        .fav {
+            display: flex;
+            justify-content: right;
+            align-items: right;
+        }
         // button {
         //     display: block;
         //     margin: 2rem auto 0;

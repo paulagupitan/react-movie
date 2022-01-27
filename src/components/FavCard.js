@@ -20,7 +20,9 @@ function FavCard({ movie, favourites, setFavourites }) {
                     <h3 className="fav-movie-rating">{movie.vote_average}</h3>
                     <h2>{movie.title}</h2>
                     <p className="fav-movie-overview">{movie.overview}</p>
-                    <FavButton favourites={favourites} setFavourites={setFavourites} movie={movie} />
+                    <div className="fav-btn">
+                        <FavButton favourites={favourites} setFavourites={setFavourites} movie={movie} />
+                    </div>
                 </div>
             </div>
         </div>
