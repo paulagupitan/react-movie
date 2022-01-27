@@ -1,12 +1,8 @@
 import { Link } from 'react-router-dom';
 import noPoster from '../images/no-movie-poster.jpg';
+import { dateFormat } from '../utilities/format';
 
 function MovieCard({ movie }) {
-
-    function dateFormat(string) {
-        const date = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(string).toLocaleDateString([], date);
-    }
 
     return (
 

@@ -3,7 +3,7 @@ function PageNotFound() {
         <main>
             <section>
                 <h2>Page not Found</h2>
-                <p>This app was created with love ❤️ by Snowball. 😎...</p>
+                <p>Oops, there is nothing here!</p>
             </section>
         </main>
     );
