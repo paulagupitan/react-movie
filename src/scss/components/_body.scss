@@ -6,21 +6,26 @@ body {
 }
 //animation for nav bar
 
-.fav-page {
-  min-height: 70vh;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 18rem;
-}
-
-.about-page {
-  padding: 10rem 2rem 0rem 2rem;
+.fav-page-message {
+  padding: 6rem 2rem 0rem 2rem;
   min-height: 70vh;
   text-align: center;
   font-size: 12px;
-  @media (min-width: 800px) {
+  @media (min-width: 768px) {
     margin: 0 auto;
-    font-size: 16px;
-    // padding-top: 15rem;
+    font-size: 14px;
+    padding-top: 10rem;
+  }
+}
+
+.about-page {
+  padding: 6rem 2rem 0rem 2rem;
+  min-height: 70vh;
+  text-align: center;
+  font-size: 12px;
+  @media (min-width: 768px) {
+    margin: 0 auto;
+    font-size: 14px;
+    padding-top: 10rem;
   }
 }
