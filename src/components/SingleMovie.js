@@ -38,6 +38,7 @@ function SingleMovie({ movie, favourites, setFavourites }) {
                     </div>
                     <h2>{movie.title}</h2>
                     <p>{movie.overview}</p>
+                    {/* need to get all the genres, not just the first one */}
                     <p>Genre: {movie.genres[0].name}</p>
 
                     {movie.videos.results.length > 0 && <Trailer movie={movie} />}
