@@ -1,15 +1,14 @@
-import {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
-// import SingleMovie from '../components/SingleMovie';
-import {apiKey} from '../globals/globalVariables';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { apiKey } from '../globals/globalVariables';
 import SingleMovie from '../components/SingleMovie';
 
-function IndividualMovie( {favourites, setFavourites} ) {
+function IndividualMovie({ favourites, setFavourites }) {
 
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
 
-    useEffect( () => {
+    useEffect(() => {
         const getMovie = async () => {
             const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US&append_to_response=videos
             `);
@@ -18,11 +17,11 @@ function IndividualMovie( {favourites, setFavourites} ) {
         }
 
         getMovie();
-    },[])
+    }, [])
 
     return (
         <section>
-           {movie !== null && <SingleMovie favourites={favourites} setFavourites={setFavourites} movie={movie} />}
+            {movie !== null && <SingleMovie favourites={favourites} setFavourites={setFavourites} movie={movie} />}
 
         </section>
     );
