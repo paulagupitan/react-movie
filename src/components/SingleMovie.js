@@ -1,21 +1,9 @@
 import FavButton from "./FavButton";
+import { dateFormat } from '../utilities/format';
+import { minToHrMin } from '../utilities/format';
+import Trailer from './Trailer';
 
 function SingleMovie({ movie, favourites, setFavourites }) {
-
-    function dateFormat(string) {
-        const date = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(string).toLocaleDateString([], date);
-    }
-
-    function minToHrMin(time) {
-        let hour = Math.floor(time / 60);
-        let min = time % 60;
-        let timeInHrMin = `${hour}h ${min}m`;
-
-        return timeInHrMin;
-    }
-
-
 
     return (
         <div className="movie-card-single">
@@ -36,11 +24,13 @@ function SingleMovie({ movie, favourites, setFavourites }) {
                     </div>
                     <h2>{movie.title}</h2>
                     <p>{movie.overview}</p>
+                    <p>Genre: {movie.genres.map(genres => genres.name).join(", ")}</p>
+                    <div className="fav">
+                        {movie.videos.results.length > 0 && <Trailer movie={movie} />}
+                        <FavButton favourites={favourites} setFavourites={setFavourites} movie={movie} />
+                    </div>
 
-                    <p>Genre: {movie.genres.map(genres => genres.name).join(",")}</p>
-                    <div className="fav"><FavButton favourites={favourites} setFavourites={setFavourites} movie={movie} /></div>
-
-                    <button>play trailer</button>
+                    
                 </div>
             </div>
         </div>

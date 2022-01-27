@@ -1,11 +1,8 @@
 import FavButton from "./FavButton";
 import noPoster from '../images/no-movie-poster.jpg';
-function FavCard({ movie, favourites, setFavourites }) {
+import { dateFormat } from '../utilities/format';
 
-    function dateFormat(string) {
-        const date = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(string).toLocaleDateString([], date);
-    }
+function FavCard({ movie, favourites, setFavourites }) {
 
     return (
 

@@ -43,10 +43,32 @@
     padding: 0.55rem 0.95rem;
     background-color: transparent;
     color: white;
+    &:hover {
+        color: #4e7f94;
+    }
 }
 
 iframe {
     display: block;
     margin: 15rem auto;
     z-index: 999;
+}
+
+// Trailer Button
+
+.trailer-button {
+    background-color: $brandDark;
+    color: $textLight;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 10px;
+    display: block;
+    // margin: 0 auto;
+    // margin-top: 20%;
+    font-size: 12px;
+    font-weight: $regularSize;
+    text-decoration: none;
+    &:hover{
+        background: darken($brandDark,4%);
+    }
 }

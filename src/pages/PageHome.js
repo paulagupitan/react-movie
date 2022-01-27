@@ -6,7 +6,7 @@ import Banner from '../components/Banner';
 import SearchInput from '../components/SearchInput';
 
 
-function PageHome({ sort, movie }) {
+function PageHome({ sort }) {
 
     const [moviesData, setMoviesData] = useState(null);
 
@@ -27,9 +27,13 @@ function PageHome({ sort, movie }) {
 
     return (
         <main>
-            {moviesData !== null && <section><Banner movies={moviesData} />
+            {moviesData !== null && 
+            <section>
+                <Banner movies={moviesData} />
                 <SearchInput />
-                <NavSort /> <Movies movies={moviesData} /></section>}
+                <NavSort /> 
+                <Movies movies={moviesData} />
+            </section>}
         </main>
     );
 }

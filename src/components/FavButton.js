@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { isFav, addToFavs, removeFromFavs } from '../utilities/storage';
+import { useState} from 'react';
+import { isFav } from '../utilities/storage';
 import whiteHeart from '../images/heart-white.png';
 import blueHeart from '../images/blue-heart.png';
 

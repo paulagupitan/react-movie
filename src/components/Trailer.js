@@ -41,8 +41,8 @@ function Trailer({movie}) {
 
             {trailerOpen ?
             
-            <div>
-                {/* <div className="video-overlay"></div> */}
+            
+                /* <div className="video-overlay"></div> */
 
                 <div className="video-container">
                     <button className="close-button" onMouseDown={(e)=>{e.preventDefault();}} onClick={handleCloseTrailer}>x</button>
@@ -51,8 +51,9 @@ function Trailer({movie}) {
                     </div>
                 </div> :
 
+                <button className="trailer-button" onMouseDown={(e) => { e.preventDefault(); }} onClick={handleClickTrailer}>Trailer</button>
 
-                <button className="trailer-button" onMouseDown={(e) => { e.preventDefault(); }} onClick={handleClickTrailer}>Trailer</button>}
+            }
 
         </div>
     )
