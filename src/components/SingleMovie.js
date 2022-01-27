@@ -36,7 +36,7 @@ function SingleMovie({ movie, favourites, setFavourites }) {
                     </div>
                     <h2>{movie.title}</h2>
                     <p>{movie.overview}</p>
-                    <p>Genre: {movie.genres[0].name}</p>
+                    <p>Genre: {movie.genres.map(genres => genres.name).join(",")}</p>
                     <div className="fav"><FavButton favourites={favourites} setFavourites={setFavourites} movie={movie} /></div>
 
                     <button>play trailer</button>
