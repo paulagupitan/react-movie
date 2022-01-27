@@ -2,6 +2,7 @@ import FavButton from "./FavButton";
 import { dateFormat } from '../utilities/format';
 import { minToHrMin } from '../utilities/format';
 import Trailer from './Trailer';
+import noPoster from '../images/no-movie-poster.jpg';
 
 function SingleMovie({ movie, favourites, setFavourites }) {
 
@@ -14,7 +15,10 @@ function SingleMovie({ movie, favourites, setFavourites }) {
             </div>
 
             <div className="movie-single">
-                <img className="poster-desktop" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
+                {movie.poster_path === null ?
+                    <img src={noPoster} alt="No poster available." /> :
+                    <img className="poster-desktop" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
+                }
 
                 <div className="movie-info-single">
                     <div className="release-runtime-vote">
@@ -30,7 +34,7 @@ function SingleMovie({ movie, favourites, setFavourites }) {
                         <FavButton favourites={favourites} setFavourites={setFavourites} movie={movie} />
                     </div>
 
-                    
+
                 </div>
             </div>
         </div>
