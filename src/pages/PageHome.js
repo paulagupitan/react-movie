@@ -30,8 +30,10 @@ function PageHome({ sort }) {
             {moviesData !== null && 
             <section>
                 <Banner movies={moviesData} />
-                <SearchInput />
-                <NavSort /> 
+                <section className = "search-nav">
+                    <SearchInput />
+                    <NavSort /> 
+                </section>
                 <Movies movies={moviesData} />
             </section>}
         </main>

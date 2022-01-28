@@ -12,6 +12,15 @@
   padding: 2px 40px 1px 40px;
 }
 
+.search-nav {
+
+  @include mq(820px){
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: baseline;
+  }
+}
+
 .search-bar:focus {
     outline: none;
 }
