@@ -4,16 +4,15 @@ function Trailer({movie}) {
 
     const [trailer, setTrailer] = useState('');
     
-    function checkTrailer() {
-        for (let i = 0; i < movie.videos.results.length; i++) {
-            const movieVideosResults = movie.videos.results[i];
-            if ((movieVideosResults.type == "Trailer") && (movieVideosResults.site == "YouTube")){
-                return movieVideosResults.key;
+    useEffect(() => {
+        function checkTrailer() {
+            for (let i = 0; i < movie.videos.results.length; i++) {
+                const movieVideosResults = movie.videos.results[i];
+                if ((movieVideosResults.type === "Trailer") && (movieVideosResults.site === "YouTube")){
+                    return movieVideosResults.key;
+                }
             }
         }
-    }
-
-    useEffect(() => {
         if (movie) {
             setTrailer(checkTrailer())
         }
@@ -37,9 +36,6 @@ function Trailer({movie}) {
         <div>
 
             {trailerOpen ?
-            
-            
-                /* <div className="video-overlay"></div> */
 
                 <div className="video-container">
                     <button className="close-button" onMouseDown={(e)=>{e.preventDefault();}} onClick={handleCloseTrailer}>x</button>
