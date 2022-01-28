@@ -1,3 +1,16 @@
+// Search on Page Home
+
+.search-nav {
+  @include mq(820px){
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: baseline;
+  }
+  .search {
+    padding: 2px 40px 1px 40px;
+  }
+}
+
 .search-bar {
   border: 1px solid #8196a4;
   border-radius: 10px;
@@ -5,24 +18,10 @@
   padding: 0.5rem 1rem;
   background-color: #151c27;
   color: white;
-  margin-top: 10px;
-}
-
-.search {
-  padding: 2px 40px 1px 40px;
-}
-
-.search-nav {
-
-  @include mq(820px){
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: baseline;
-  }
-}
-
-.search-bar:focus {
+  // margin-top: 10px;
+  &:focus{
     outline: none;
+  }
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #999999;
@@ -37,6 +36,8 @@
     color: $textLight;
   }
 
+// Search Bar on Page Search
+
 .page-search {
     
     // the footer gets pushed to the top when the content isnt enough to fill the page...but we want the footer to show at the bottom (ideally just within viewport height) if there is enough room
@@ -49,7 +50,6 @@
     }
 }
 
-
 .page-search-header {
     text-align: center;
     margin: 1rem;
@@ -57,10 +57,10 @@
     @include mq(1000px){
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        margin: 2rem 1rem;
+        margin: 2rem 3rem;
 
         .search-form {
-            justify-self: end;
+            // justify-self: end;
         }
     }
 
