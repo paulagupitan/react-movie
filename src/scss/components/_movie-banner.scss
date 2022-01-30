@@ -1,3 +1,10 @@
+.more-info-btn-container-banner {
+  display: flex;
+align-items: center;
+justify-content: center;
+margin: auto 0;
+
+}
 .movie-banner {
   position: relative;
 }
@@ -84,8 +91,6 @@
     text-decoration: none;
     position: absolute;
     display: block;
-    justify-content: center;
-    align-items: center;
     &:hover{
       background: darken($brandDark,4%);
     }
