@@ -57,6 +57,27 @@
       display: none;
     }
   }
+
+  .no-poster {
+    position: absolute;
+    display: block;
+    // top margin is a little off --> try using mixin
+    margin: 1.25rem auto;
+    top: 140px;
+    left: 0;
+    right: 0;
+    height: 49vh;
+    object-fit: cover;
+    object-position: center;
+
+    @include mq(425px) {
+      height: 60vh;
+    }
+
+    @include mq(820px) {
+      display: none;
+    }
+  }
 }
 
 .movie-single {
