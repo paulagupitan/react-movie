@@ -73,7 +73,7 @@
     position: static;
     visibility: visible;
     backdrop-filter: blur(0px);
-    height: 30vh;
+    height: 15rem;
 
     ul {
       display: flex;
@@ -115,6 +115,11 @@
       }
     }
   }
+}
+
+a.sort-active {
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid white;
 }
 
 // @media (min-width: 1024px) {

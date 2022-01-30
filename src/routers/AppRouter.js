@@ -15,7 +15,6 @@ function AppRouter() {
   const [favourites, setFavourites] = useState(getFavs())
 
   useEffect(() => {
-    console.log("favourites has changed!")
     localStorage.setItem('faved', JSON.stringify(favourites))
   }, [favourites])
 

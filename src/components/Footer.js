@@ -21,15 +21,13 @@ const Footer = () => (
             <li>Help Center</li>
             <li>Media Center</li>
         </ul>
-        <div className='footer-info'>
-            <p>For Educational Purposes</p>
-            <ul className='footer-list'>
-                <li>Megan Cheung</li>
-                <li>Judy Gong</li>
-                <li>Paul Agupitan</li>
-            </ul>
-            <p>&copy; {getYear()}</p>
-        </div>
+         <ul className='footer-list'>
+            <li>For Educational Purposes</li>
+            <li>Megan Cheung</li>
+            <li>Judy Gong</li>
+            <li>Paul Agupitan</li>
+            <li>&copy; {getYear()}</li>
+        </ul>
     </footer>
 );
 
