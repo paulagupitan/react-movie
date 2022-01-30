@@ -19,6 +19,8 @@ function IndividualMovie({ favourites, setFavourites }) {
         getMovie();
     }, [id])
 
+    console.log(movie);
+
     return (
         <section>
             {movie !== null && <SingleMovie favourites={favourites} setFavourites={setFavourites} movie={movie} />}

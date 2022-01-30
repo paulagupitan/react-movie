@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getFavs } from "../utilities/storage";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PageHome from '../pages/PageHome';
@@ -7,8 +9,6 @@ import PageFavourites from '../pages/PageFavourites';
 import IndividualMovie from '../pages/IndividualMovie';
 import PageSearch from '../pages/PageSearch';
 import PageNotFound from '../pages/PageNotFound';
-import { getFavs } from "../utilities/storage";
-import { useEffect, useState } from "react";
 
 function AppRouter() {
 

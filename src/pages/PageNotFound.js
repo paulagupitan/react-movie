@@ -1,5 +1,5 @@
-import { appTitle } from '../globals/globalVariables';
 import { useEffect } from 'react';
+import { appTitle } from '../globals/globalVariables';
 
 function PageNotFound() {
 
