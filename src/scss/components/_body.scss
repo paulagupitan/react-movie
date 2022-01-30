@@ -10,10 +10,14 @@ body {
   min-height: 70vh;
   text-align: center;
   font-size: 12px;
+  // fixed the fav page message
+  grid-column: span 5;
+  
   @media (min-width: 768px) {
     margin: 0 auto;
     font-size: 14px;
     padding-top: 10rem;
+    grid-column: span 5;
   }
   @media (min-width: 1024px) {
     margin: 0 auto;

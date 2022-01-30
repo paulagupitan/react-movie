@@ -1,7 +1,7 @@
 footer {
   display: grid;
   grid-template-columns: 1fr;
-  color: white;
+  color: $textLight;
   font-family: $textFont;
   background-color: $brandDark;
   text-align: center;
@@ -50,7 +50,7 @@ footer {
   }
 
   a {
-    color: white;
+    color: $textLight;
     text-decoration: none;
   }
   ul {
@@ -64,7 +64,7 @@ footer {
 
 @media (min-width: 768px) {
   footer {
-    color: white;
+    color: $textLight;
     font-family: $textFont;
     background-color: $brandDark;
     padding: 2rem 2rem 2rem 1rem;
@@ -86,11 +86,11 @@ footer {
     }
 
     h1 {
-      color: white;
+      color: $textLight;
     }
 
     a {
-      color: white;
+      color: $textLight;
       text-decoration: none;
     }
     ul {

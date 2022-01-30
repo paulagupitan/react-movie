@@ -34,7 +34,8 @@ function PageSearch() {
                     </div>
 
                     {movieSearchData.length > 0 ?
-                        <Movies movies={movieSearchData} /> : <p className="no-result">No results found.</p>}
+                    <Movies movies={movieSearchData} /> : 
+                    <p className="no-result">No results found.</p>}
                 </section>
             }
 

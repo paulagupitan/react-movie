@@ -1,12 +1,7 @@
 import { Link } from 'react-router-dom';
-
+import { dateFormat } from '../utilities/format';
 
 function Banner({ movies }) {
-
-    function dateFormat(string) {
-        const date = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(string).toLocaleDateString([], date);
-    }
 
     return (
         <div className="movie-banner">

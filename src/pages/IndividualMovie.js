@@ -17,7 +17,7 @@ function IndividualMovie({ favourites, setFavourites }) {
         }
 
         getMovie();
-    }, [])
+    }, [id])
 
     return (
         <section>
