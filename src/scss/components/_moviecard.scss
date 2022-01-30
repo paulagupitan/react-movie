@@ -60,6 +60,12 @@
     font-size: 22px;
     margin-top: 90px;
     font-weight: $boldSize;
+
+    @media (min-width: 576px) {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
 }
 
 .movie-overview {
