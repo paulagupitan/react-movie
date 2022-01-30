@@ -12,8 +12,6 @@ function PageAbout() {
                 <img className="about-logo" src={tmdb} alt="Tmdb logo" />
             </section>
 
-        </>
-
     );
 
 }
