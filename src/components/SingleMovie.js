@@ -4,21 +4,14 @@ import noPoster from '../images/no-movie-poster.jpg';
 import { dateFormat } from '../utilities/format';
 import { minToHrMin } from '../utilities/format';
 import Trailer from './Trailer';
+import { appTitle } from "../globals/globalVariables";
+import { useEffect } from 'react';
 
 function SingleMovie({ movie, favourites, setFavourites }) {
 
-    function dateFormat(string) {
-        const date = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(string).toLocaleDateString([], date);
-    }
-
-    function minToHrMin(time) {
-        let hour = Math.floor(time / 60);
-        let min = time % 60;
-        let timeInHrMin = `${hour}h ${min}m`;
-
-        return timeInHrMin;
-    }
+    useEffect(() => {
+		document.title = `${appTitle} - ${movie.title}`;
+	}, []);
 
     return (
         <div className="movie-card-single">

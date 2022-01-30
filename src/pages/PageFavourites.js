@@ -1,6 +1,12 @@
+import { useEffect } from 'react';
 import FavCard from '../components/FavCard';
+import { appTitle } from '../globals/globalVariables';
 
 function PageFavourites({ favourites, setFavourites }) {
+
+    useEffect(() => {
+		document.title = `${appTitle} - Favourites`;
+	}, []);
 
     return (
         <main>

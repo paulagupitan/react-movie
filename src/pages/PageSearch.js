@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Movies from '../components/Movies';
-import { apiKey } from '../globals/globalVariables';
+import { appTitle, apiKey } from '../globals/globalVariables';
 import SearchInput from '../components/SearchInput';
 
 function PageSearch() {
@@ -21,6 +21,10 @@ function PageSearch() {
 
         getMovie();
     }, [query])
+
+    useEffect(() => {
+		document.title = `${appTitle} - Search`;
+	}, []);
 
 
     return (

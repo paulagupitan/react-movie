@@ -22,7 +22,6 @@ function IndividualMovie({ favourites, setFavourites }) {
     return (
         <section>
             {movie !== null && <SingleMovie favourites={favourites} setFavourites={setFavourites} movie={movie} />}
-
         </section>
     );
 }
