@@ -4,9 +4,8 @@ body {
   color: $textLight;
   font-family: $textFont;
 }
-//animation for nav bar
 
-.fav-page-message {
+.about-page {
   padding: 6rem 2rem 0rem 2rem;
   min-height: 70vh;
   text-align: center;
@@ -20,16 +19,24 @@ body {
     padding-top: 10rem;
     grid-column: span 5;
   }
-}
-
-.about-page {
-  padding: 6rem 2rem 0rem 2rem;
-  min-height: 70vh;
-  text-align: center;
-  font-size: 12px;
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     margin: 0 auto;
     font-size: 14px;
-    padding-top: 10rem;
+    padding: 10rem 4rem 0 4rem;
+  }
+}
+
+.about-logo {
+  width: 70px;
+  display: block;
+  position: absolute;
+  z-index: 100;
+  bottom: 300px;
+  left: 30px;
+  @media (min-width: 768px) {
+    left: 50px;
+  }
+  @media (min-width: 1024px) {
+    left: 80px;
   }
 }
