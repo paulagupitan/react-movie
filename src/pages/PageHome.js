@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Movies from '../components/Movies';
-import { apiKey } from '../globals/globalVariables';
+import { appTitle, apiKey } from '../globals/globalVariables';
 import NavSort from '../components/NavSort';
 import Banner from '../components/Banner';
 import SearchInput from '../components/SearchInput';
@@ -24,6 +24,9 @@ function PageHome({ sort }) {
         fetchMovies();
     }, [sort]);
 
+    useEffect(() => {
+		document.title = `${appTitle} - Home`;
+	}, []);
 
     return (
         <main>

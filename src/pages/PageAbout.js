@@ -1,6 +1,13 @@
+import { useEffect } from 'react';
+import { appTitle } from '../globals/globalVariables';
 import tmdb from '../images/tmdb.svg.png';
 
 function PageAbout() {
+
+    useEffect(() => {
+		document.title = `${appTitle} - About`;
+	}, []);
+
     return (
             <section className="about-page">
                 {/* Need to add tmdb logo */}
