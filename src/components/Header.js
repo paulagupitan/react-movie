@@ -27,7 +27,7 @@ const Header = () => {
 
     return (
         <header className={navOpen ? 'show' : undefined}>
-           <Link className="logo" to={'/'}><img className="header-logo" src={logo} alt="Logo" /></Link>
+           <Link className="logo" to={'/'}><img className="header-logo" src={logo} alt="Xtramovie logo" /></Link>
             <button className="btn-main-nav" 
                     onMouseDown={(e) => { e.preventDefault(); }}
                     onClick={showHideNav}>

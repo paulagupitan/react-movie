@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import FavCard from '../components/FavCard';
 import { appTitle } from '../globals/globalVariables';
+import FavCard from '../components/FavCard';
 
 function PageFavourites({ favourites, setFavourites }) {
 

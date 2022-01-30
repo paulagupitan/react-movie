@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import Movies from '../components/Movies';
 import { appTitle, apiKey } from '../globals/globalVariables';
-import NavSort from '../components/NavSort';
 import Banner from '../components/Banner';
+import NavSort from '../components/NavSort';
 import SearchInput from '../components/SearchInput';
+import Movies from '../components/Movies';
 
 
 function PageHome({ sort }) {

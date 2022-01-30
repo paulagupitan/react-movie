@@ -13,63 +13,10 @@ export function getFavs() {
 
 export function isFav(movie, favourites) {
 
-    // const favsFromStorage = getFavs();
-
-    // if (favsFromStorage.length === 0) {
-    //     return false;
-    // }
-
-    // function isInFavs(obj) {
-    //     return obj.id === movie.id;
-    // }
-
-    // return favsFromStorage.find(isInFavs) !== undefined ? true : false;
-
     const movieInFavourites = favourites.find(favourite => favourite.id === movie.id);
     // either will be equal to the movie, or undefined 
 
     return movieInFavourites === undefined ? false : true;
 
 }
-
-// export function addToFavs(movie) {
-
-//     let favsFromStorage = localStorage.getItem('faved');
-//     let favsForStorage;
-
-//     if (favsFromStorage === null) {
-//         favsForStorage = [movie];
-//         favsForStorage = JSON.stringify(favsForStorage);
-//         localStorage.setItem('faved', favsForStorage);
-//         return;
-//     }
-
-//     favsFromStorage = JSON.parse(favsFromStorage)
-
-//     if (!Array.isArray(favsFromStorage)) {
-//         favsForStorage = [movie];
-//         favsForStorage = JSON.stringify(favsForStorage);
-//         localStorage.setItem('faved', favsForStorage);
-//         return;
-//     }
-
-//     favsForStorage = [...favsFromStorage, movie];
-//     favsForStorage = JSON.stringify(favsForStorage);
-//     localStorage.setItem('faved', favsForStorage);
-// }
-
-// destringfy, find item in array, and then splice to remove item from array
-
-// export function removeFromFavs(movie) {
-
-//     let favsFromStorage = localStorage.getItem('faved');
-//     favsFromStorage = JSON.parse(favsFromStorage);
-
-//     const isTheMovie = (obj) => obj.id === movie.id;
-//     let indexOfItemToRemove = favsFromStorage.findIndex(isTheMovie);
-//     favsFromStorage.splice(indexOfItemToRemove, 1);
-//     favsFromStorage = JSON.stringify(favsFromStorage);
-//     localStorage.setItem('faved', favsFromStorage);
-
-// }
 
