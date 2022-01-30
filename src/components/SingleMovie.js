@@ -4,7 +4,6 @@ import noPoster from '../images/no-movie-poster.jpg';
 import { dateFormat } from '../utilities/format';
 import { minToHrMin } from '../utilities/format';
 import Trailer from './Trailer';
-import noPoster from '../images/no-movie-poster.jpg';
 
 function SingleMovie({ movie, favourites, setFavourites }) {
 
