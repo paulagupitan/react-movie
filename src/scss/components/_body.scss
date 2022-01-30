@@ -15,4 +15,24 @@ body {
     font-size: 14px;
     padding-top: 10rem;
   }
+  @media (min-width: 1024px) {
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 10rem 4rem 0 4rem;
+  }
+}
+
+.about-logo {
+  width: 70px;
+  display: block;
+  position: absolute;
+  z-index: 100;
+  bottom: 300px;
+  left: 30px;
+  @media (min-width: 768px) {
+    left: 50px;
+  }
+  @media (min-width: 1024px) {
+    left: 80px;
+  }
 }
