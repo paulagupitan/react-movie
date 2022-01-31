@@ -62,7 +62,7 @@ footer {
   }
 }
 
-@media (min-width: 768px) {
+@include mq($tablet) {
   footer {
     color: $textLight;
     font-family: $textFont;

@@ -12,14 +12,14 @@ body {
   font-size: 12px;
   // fixed the fav page message
   grid-column: span 5;
-  
-  @media (min-width: 768px) {
+
+  @include mq($tablet) {
     margin: 0 auto;
     font-size: 14px;
     padding-top: 10rem;
     grid-column: span 5;
   }
-  @media (min-width: 1024px) {
+  @include mq($laptop) {
     margin: 0 auto;
     font-size: 14px;
     padding: 10rem 4rem 0 4rem;
@@ -34,10 +34,10 @@ body {
   z-index: 100;
   bottom: 300px;
   left: 30px;
-  @media (min-width: 768px) {
+  @include mq($tablet) {
     left: 50px;
   }
-  @media (min-width: 1024px) {
+  @include mq($laptop) {
     left: 80px;
   }
 }

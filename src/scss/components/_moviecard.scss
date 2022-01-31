@@ -1,97 +1,93 @@
 .movie-poster img {
-    object-fit: cover;
-    // height: 385px;
-    width: auto;
+  object-fit: cover;
+  // height: 385px;
+  width: auto;
 }
 .movie-poster {
-    position: relative;
+  position: relative;
 }
 
 .movie-info {
-    position: absolute;
-    padding: 2em;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    opacity: 0;
-    transition: opacity 0.25s;
+  position: absolute;
+  padding: 2em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  opacity: 0;
+  transition: opacity 0.25s;
 }
 
 .movie-poster img {
-    display: block;
+  display: block;
 }
 .movie-info:hover {
-    opacity: 1;
+  opacity: 1;
 }
-
 
 .movie-date {
-    position: absolute;
-    font-size: 12px;
-    font-weight: $regularSize;
+  position: absolute;
+  font-size: 12px;
+  font-weight: $regularSize;
 }
 
-
 .movie-rating {
-    position: absolute;
-    font-size: 1.5rem;
-    padding: 10px 10px;
-    right: 20px;
-    width: 60px;
-    border: 1px solid white;
-    border-radius: 10px;
-    text-align: center;
+  position: absolute;
+  font-size: 1.5rem;
+  padding: 10px 10px;
+  right: 20px;
+  width: 60px;
+  border: 1px solid white;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .movie-info h2 {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    font-size: 22px;
-    margin-top: 90px;
-    font-weight: $boldSize;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 22px;
+  margin-top: 90px;
+  font-weight: $boldSize;
 
-    @media (min-width: 576px) {
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-      }
+  @include mq($firstBp) {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
 }
 
 .movie-overview {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    font-size: 12px;
-    font-weight: $regularSize;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  font-size: 12px;
+  font-weight: $regularSize;
 }
 
-
-
 .more-info {
-    background-color: $brandDark;
-    box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
-    border: none;
-    padding: 14px 20px;
-    border-radius: 1em;
-    display: block;
-    margin: 0 auto;
-    margin-top: 20%;
-    color: white;
-    text-decoration: none;
-    font-size: 12px;
-&:after {
+  background-color: $brandDark;
+  box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 14px 20px;
+  border-radius: 1em;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20%;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  &:after {
     position: absolute;
     width: 0;
     height: 0;
@@ -100,14 +96,14 @@
     top: var(--mouse-y);
     left: var(--mouse-x);
     transform-style: flat;
-    transform: translate3d(-50%,-50%,0);
-    background: rgba(white,.1);
+    transform: translate3d(-50%, -50%, 0);
+    background: rgba(white, 0.1);
     border-radius: 100%;
-    transition: width .3s ease, height .3s ease;
+    transition: width 0.3s ease, height 0.3s ease;
   }
   &:focus,
   &:hover {
-      background: darken($brandDark,4%);
+    background: darken($brandDark, 4%);
   }
   &:active {
     &:after {

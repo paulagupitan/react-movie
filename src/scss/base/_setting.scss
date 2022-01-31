@@ -2,13 +2,12 @@
 
 // Colors
 $brandDark: #042440;
-$bgDark: #11171E;
+$bgDark: #11171e;
 $textLight: white;
 $textDark: #408196;
 
-
 // Fonts
-$textFont: 'Montserrat', sans-serif;
+$textFont: "Montserrat", sans-serif;
 $lightSize: 300;
 $regularSize: 400;
 $boldSize: 700;
@@ -17,6 +16,14 @@ $boldSize: 700;
 $section-padding: em(16) em(20);
 
 //Breakpoints
-$tablet: 540;
-$desktop: 820;
-$desktopWide: 1000;
+$phone-large: 425px;
+$tablet-small: 540px;
+$firstBp: 576px;
+$tablet: 768px;
+$tablet-med: 720px;
+$secondBp: 992px;
+$desktop: 820px;
+$desktopWide: 1000px;
+$thirdBp: 1200px;
+$laptop: 1024px;
+$large-laptop: 1440px;

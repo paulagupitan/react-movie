@@ -1,9 +1,8 @@
 .more-info-btn-container-banner {
   display: flex;
-align-items: center;
-justify-content: center;
-margin: auto 0;
-
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
 }
 .movie-banner {
   position: relative;
@@ -13,7 +12,7 @@ margin: auto 0;
   display: none;
 }
 
-@media (min-width: 768px) {
+@include mq($tablet) {
   .movie-info-banner {
     position: absolute;
     padding: 2em;
@@ -91,13 +90,13 @@ margin: auto 0;
     text-decoration: none;
     position: absolute;
     display: block;
-    &:hover{
-      background: darken($brandDark,4%);
+    &:hover {
+      background: darken($brandDark, 4%);
     }
   }
 }
 
-@media (min-width: 1024px) {
+@include mq($laptop) {
   .movie-info-banner {
     padding: 4em;
   }
@@ -125,7 +124,7 @@ margin: auto 0;
   }
 }
 
-@media (min-width: 1440px) {
+@include mq($large-laptop) {
   .movie-info-banner {
     padding: 5em;
   }
