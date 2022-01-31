@@ -28,3 +28,15 @@
     grid-template-columns: repeat(5, 1fr);
   }
 }
+  .page-home .movie-card-container:last-child {
+    @include mq($tablet) {
+      display: none;
+    }
+    @include mq($secondBp) {
+      display: block;
+    }
+    @include mq($thirdBp) {
+      display: none;
+    }
+  }
+

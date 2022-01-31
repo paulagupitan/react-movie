@@ -83,6 +83,13 @@
     -webkit-box-orient: vertical;
     font-size: 12px;
     font-weight: $regularSize;
+
+    @include mq($tablet) {
+    -webkit-line-clamp: 3;
+    }
+    @include mq($secondBp) {
+      -webkit-line-clamp: 4;
+      }
   }
 
 }

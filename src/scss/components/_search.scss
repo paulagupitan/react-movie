@@ -104,3 +104,32 @@
     }
   }
 }
+
+.page-search {
+  .movie-poster img {
+    min-height: 390px;
+    max-height: 790px;
+    width: 100%;
+    object-fit: cover;
+
+    @include mq($firstBp) {
+      min-height: 465px;
+    }
+
+    @include mq($tablet-med) {
+      min-height: 486px;
+    }
+
+    @include mq($tablet) {
+      min-height: 424px;
+    }
+
+    @include mq($desktopWide) {
+      min-height: 390px
+    }
+
+    @include mq($large-laptop) {
+      min-height: 433px;
+    }
+  }
+}

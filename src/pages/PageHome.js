@@ -16,7 +16,7 @@ function PageHome({ sort }) {
             const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?api_key=${apiKey}&language=en-US&page=1`);
             let moviesDataFromAPI = await res.json();
 
-            moviesDataFromAPI = moviesDataFromAPI.results.splice(0, 15);
+            moviesDataFromAPI = moviesDataFromAPI.results.splice(0, 16);
             console.log(moviesDataFromAPI);
             setMoviesData(moviesDataFromAPI);
         }
@@ -31,7 +31,7 @@ function PageHome({ sort }) {
     return (
         <main>
             {moviesData !== null && 
-            <section>
+            <section className="page-home">
                 <Banner movies={moviesData} />
                 <section className = "search-nav">
                     <SearchInput />

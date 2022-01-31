@@ -106,8 +106,28 @@
         // -webkit-line-clamp: 6;
         // -webkit-box-orient: vertical;
         // overflow: hidden;
-        height: 121px;
-        overflow-y: scroll;
+        height: 6.25rem;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+      }
+      // Scroll Bar Styling
+
+      ::-webkit-scrollbar {
+        width: 0.1875rem;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: $brandDark;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: $hoverBlue;
+        border-radius: 10px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: $textLight;
       }
     }
 
