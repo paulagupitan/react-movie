@@ -100,12 +100,14 @@
     @include mq($desktop) {
       padding: 0 3rem;
 
-      p {
+      p.desc {
         font-size: 0.9rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 6;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        // display: -webkit-box;
+        // -webkit-line-clamp: 6;
+        // -webkit-box-orient: vertical;
+        // overflow: hidden;
+        height: 121px;
+        overflow-y: scroll;
       }
     }
 

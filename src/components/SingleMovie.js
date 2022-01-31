@@ -37,7 +37,7 @@ function SingleMovie({ movie, favourites, setFavourites }) {
                         <p className="vote">{movie.vote_average}</p>
                     </div>
                     <h2>{movie.title}</h2>
-                    <p>{movie.overview}</p>
+                    <p className="desc">{movie.overview}</p>
                     <p>Genre: {movie.genres.map(genres => genres.name).join(", ")}</p>
                     <div className="fav">
                         {movie.videos.results.length > 0 ? <Trailer movie={movie} /> : <div></div>}
