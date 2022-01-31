@@ -120,6 +120,12 @@
 a.sort-active {
   padding-bottom: 0.25rem;
   border-bottom: 2px solid white;
+
+  &:active {
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid white;
+  }
+
 }
 
 // @media (min-width: 1024px) {
