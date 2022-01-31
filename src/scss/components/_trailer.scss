@@ -1,65 +1,65 @@
 .video-container {
-    overscroll-behavior: contain;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.5);
-    backdrop-filter: blur(0.625rem);
-    -webkit-backdrop-filter: blur(0.625rem);
-    width: 100%;
-    height: 100vh;
-    z-index: 996;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1rem;
+  overscroll-behavior: contain;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.625rem);
+  -webkit-backdrop-filter: blur(0.625rem);
+  width: 100%;
+  height: 100vh;
+  z-index: 996;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .video-iframe-container {
-    overflow-y: hidden;
-    position: relative;
-    width: 100%;
-    z-index: 997;
+  overflow-y: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 997;
 }
 
 .close-button {
-    z-index: 998;
-    border: 4px solid $textLight;
-    border-radius: 50%;
-    font-size: 1.25rem;
-    padding: 0.55rem 0.95rem;
-    background-color: transparent;
-    color: white;
-    &:hover {
-        color: #4e7f94;
-    }
+  z-index: 998;
+  border: 4px solid $textLight;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  padding: 0.55rem 0.95rem;
+  background-color: transparent;
+  color: white;
+  &:hover {
+    color: #4e7f94;
+  }
 
-    @include mq(820px) {
-       margin-right: -43rem;
-    }
+  @include mq($desktop) {
+    margin-right: -43rem;
+  }
 }
 
 iframe {
-    display: block;
-    z-index: 999;
-    margin: 0 auto;
+  display: block;
+  z-index: 999;
+  margin: 0 auto;
 }
 
 // Trailer Button
 
 .trailer-button {
-    background-color: $brandDark;
-    color: $textLight;
-    border: none;
-    padding: 0.875rem 1.25rem;
-    border-radius: 10px;
-    display: block;
-    font-size: 12px;
-    font-weight: $regularSize;
-    text-decoration: none;
-    &:hover{
-        background: darken($brandDark,4%);
-    }
+  background-color: $brandDark;
+  color: $textLight;
+  border: none;
+  padding: 0.875rem 1.25rem;
+  border-radius: 10px;
+  display: block;
+  font-size: 12px;
+  font-weight: $regularSize;
+  text-decoration: none;
+  &:hover {
+    background: darken($brandDark, 4%);
+  }
 }
