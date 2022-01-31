@@ -9,14 +9,16 @@ function PageAbout() {
 	}, []);
 
     return (
+        <main>
             <section className="about-page">
                 <h2>Let's talk about XTRAMOV!E </h2>
-                <p>The XTRAMOV!E movie database is a website where users can find popular, top rated, now playing and upcoming movie listings.</p>
-                <p>Browse for your favourite genres or movies, check out their ratings and see how they match up!</p>
-                <p>Found something you like? Add them to your favourites and remove any item anytime.</p>
+                <p>With the XTRAMOV!E movie database, you can find information on all the newest and upcoming movies, the most popular feature films, and top rated movies.</p>
+                <p>Click on the heart icon to add a movie to your very own Favourites collection, where you can keep track of all the movies you like.</p>
+                <p>Browse to check out the ratings and genres, and watch the trailers!</p>
                 <p>This product uses the TMDb API but is not endorsed or certified by TMDb.</p>
                 <img className="about-logo" src={tmdb} alt="The Movie Database logo" />
             </section>
+        </main>
 
     );
 

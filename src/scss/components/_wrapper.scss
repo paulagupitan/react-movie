@@ -1,8 +1,9 @@
 .wrapper {
-  max-width: 100%;
+  max-width: 100rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  @include mc (false);
 }
 
 main {

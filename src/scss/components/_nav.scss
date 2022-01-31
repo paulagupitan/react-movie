@@ -1,17 +1,22 @@
-// Main nav
+// Navigation
+
+// Main Nav
 .main-nav {
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
-  top: 80px;
+  top: 5rem;
   visibility: hidden;
   z-index: 20;
   transition: visibility 0s 0.3s;
-  background-color: rgba(0, 0, 0, 0.3);
   opacity: 1;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.7);
+  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+      background-color: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+  }
   padding-top: 5rem;
 
   .show & {
@@ -26,14 +31,15 @@
     line-height: 1;
     list-style: none;
   }
+
   a {
-    color: white;
+    color: $textLight;
     text-decoration: none;
     display: block;
-    line-height: 50px;
+    line-height: 3.125rem;
     text-align: center;
     font-size: 1.5em;
-    padding: 13px 12px;
+    padding: 0.8125rem 0.75rem;
 
     &:hover,
     &:focus,
@@ -55,7 +61,7 @@
 
   a {
     text-decoration: none;
-    color: white;
+    color: $textLight;
     margin: 0 auto;
     text-align: center;
     font-size: 1rem;
@@ -88,6 +94,7 @@
       width: 140px;
     }
   }
+
   .nav-sort {
     font-size: 18px;
     display: flex;
@@ -98,27 +105,27 @@
     a {
       color: white;
       font-size: 1rem;
-      font-weight: regularSize;
+      font-weight: $regularSize;
       text-decoration: none;
       list-style: none;
       display: block;
 
-      &:hover {
-        color: $textDark;
-      }
-    }
-
-    @include mq($desktop) {
-      main-nav {
-        ul {
-          width: 60%;
+        &:hover {
+          color: $textDark;
         }
       }
-    }
+
+      @include mq($desktop) {
+        main-nav {
+          ul {
+            width: 60%;
+          }
+        }
+      }
   }
 }
 
 a.sort-active {
   padding-bottom: 0.25rem;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid $textLight;
 }

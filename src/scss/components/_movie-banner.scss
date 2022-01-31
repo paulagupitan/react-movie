@@ -1,67 +1,77 @@
-.more-info-btn-container-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto 0;
-}
+// Banner
+
 .movie-banner {
   position: relative;
+
+  @include mq($tablet){
+    img {
+      height: calc(100vh - 5rem);
+      object-fit: cover;
+      width: 100%;
+    }
+  }
 }
 
 .movie-info-banner {
   display: none;
-}
 
-@include mq($tablet) {
-  .movie-info-banner {
+  @include mq($tablet){
     position: absolute;
     padding: 2em;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
+    height: calc(100vh - 5rem);
+    background-color: rgba(0, 0, 0, 0.7);
+
+    /* Backdrop Filter workaround for unsupported browsers (eg. Firefox) https://stackoverflow.com/a/44366154/17486392 */
+
+    /* if backdrop support: */
+    @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+        background-color: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    display: grid;
+    grid-auto-rows: min-content;
+    align-content: end;
     opacity: 0;
     transition: opacity 0.25s;
-  }
 
-  .movie-info-banner:hover {
-    opacity: 1;
-  }
+    &:hover {
+      opacity: 1;
+    }
 
+    .date-rating-banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    h2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      font-size: 22px;
+      font-weight: $boldSize;
+    }
+  }
+}
+
+@include mq($tablet) {
   .movie-date-banner {
-    position: absolute;
     font-size: 14px;
     font-weight: $regularSize;
-    margin-top: 18px;
   }
 
   .movie-rating-banner {
-    position: absolute;
     font-size: 1.5rem;
-    padding: 10px 10px;
-    right: 51px;
-    width: 60px;
+    padding: 0.625rem;
+    width: 3.75rem;
     border: 1px solid white;
     border-radius: 10px;
     text-align: center;
-  }
-
-  .movie-info-banner h2 {
-    // overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    font-size: 22px;
-    margin-top: 17%;
-    font-weight: $boldSize;
   }
 
   .movie-overview-banner {
@@ -76,20 +86,14 @@
   .more-info-btn {
     background-color: $brandDark;
     border: none;
-    padding: 14px 20px;
+    padding: 0.875rem 1.25rem;
     border-radius: 10px;
     display: block;
-    margin: 0 auto;
-    margin-top: 7%;
-  }
-
-  .more-info-btn {
-    color: white;
+    margin-top: 1rem;
+    color: $textLight;
     font-size: 12px;
     font-weight: $regularSize;
     text-decoration: none;
-    position: absolute;
-    display: block;
     &:hover {
       background: darken($brandDark, 4%);
     }
@@ -102,25 +106,10 @@
   }
   .movie-date-banner {
     font-size: 16px;
-    margin-top: 70px;
-  }
-
-  .movie-rating-banner {
-    top: 116px;
-    right: 64px;
-  }
-
-  .movie-info-banner h2 {
-    font-size: 26px;
-    margin-top: 24%;
   }
 
   .movie-overview-banner {
     font-size: 16px;
-  }
-
-  .more-info-btn {
-    margin-top: 7%;
   }
 }
 
@@ -130,19 +119,20 @@
   }
   .movie-date-banner {
     font-size: 20px;
-    margin-top: 160px;
-  }
-
-  .movie-rating-banner {
-    top: 223px;
-    right: 82px;
   }
 
   .movie-info-banner h2 {
     font-size: 30px;
-    margin-top: 30%;
   }
+
   .movie-overview-banner {
     font-size: 19px;
   }
+}
+
+.more-info-btn-container-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
 }
