@@ -13,13 +13,13 @@ function FavCard({ movie, favourites, setFavourites }) {
                     <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
                 }
                 <div className="fav-movie-info">
-                    <h3 className="fav-movie-date">{dateFormat(movie.release_date)}</h3>
+                    <h3 className="fav-movie-date">
+                        {movie.release_date === "" ? <p>Date Unavailable</p> : dateFormat(movie.release_date) }
+                        </h3>
                     <h3 className="fav-movie-rating">{movie.vote_average}</h3>
                     <h2>{movie.title}</h2>
                     <p className="fav-movie-overview">{movie.overview}</p>
-                    <div className="fav-btn">
-                        <FavButton favourites={favourites} setFavourites={setFavourites} movie={movie} />
-                    </div>
+                    <FavButton favourites={favourites} setFavourites={setFavourites} movie={movie} />
                 </div>
             </div>
         </div>

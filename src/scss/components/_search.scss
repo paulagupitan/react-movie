@@ -1,77 +1,106 @@
-// Search on Page Home
+// Search
 
+// Search on Page Home
 .search-nav {
-  @include mq(820px){
+  @include mq($desktop) {
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: baseline;
   }
   .search {
-    padding: 2px 40px 1px 40px;
+    padding: 0.125rem 2.5rem 0.0625rem 2.5rem;
   }
 }
 
+// The Actual Search Bar
 .search-bar {
   border: 1px solid #8196a4;
   border-radius: 10px;
   width: 100%;
   padding: 0.5rem 1rem;
-  background-color: #151c27;
-  color: white;
-  // margin-top: 10px;
-  &:focus{
+  margin: 1rem auto;
+  background-color: $searchDark;
+  color: $textLight;
+  &:focus {
     outline: none;
   }
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #999999;
-    opacity: 1; /* Firefox */
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $textLight;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: $textLight;
-  }
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $grey;
+  opacity: 1; /* Firefox */
+}
 
-// Search Bar on Page Search
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $textLight;
+}
 
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: $textLight;
+}
+
+// Search on Page Search
 .page-search {
-    
-    // the footer gets pushed to the top when the content isnt enough to fill the page...but we want the footer to show at the bottom (ideally just within viewport height) if there is enough room
-
-    .no-result {
-        font-size: 1.25rem;
-        padding-top: 5rem;
-        height: 50vh;
-        text-align: center;
-    }
+  .no-result {
+    font-size: 1.25rem;
+    padding-top: 5rem;
+    height: 50vh;
+    text-align: center;
+  }
 }
 
 .page-search-header {
-    text-align: center;
-    margin: 1rem;
+  text-align: center;
+  margin: 1rem;
 
-    @include mq(1000px){
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        margin: 2rem 3rem;
+  @include mq($desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.75rem;
+    margin: 2rem 3rem;
+    align-items: center;
+  }
 
-        .search-form {
-            // justify-self: end;
-        }
+  .search-results {
+    margin-top: 1rem;
+
+    @include mq($desktop) {
+      grid-column: 2 / 4;
+      @include mc (false);
+      align-self: center;
     }
-
-    .search-results {
-        margin-top: 1rem;
-
-        @include mq(1000px){
-            grid-column: 2 / 4;
-            margin: 0 auto;
-            align-self: center;
-         }
-    }
+  }
 }
 
+// Changing the min-height of the images to get consistent poster sizes so layout won't break, and preventing text from breaking as well
+
+.page-search {
+  .movie-poster img {
+    min-height: 390px;
+    max-height: 790px;
+    width: 100%;
+    object-fit: cover;
+
+    @include mq($firstBp) {
+      min-height: 465px;
+    }
+
+    @include mq($tablet-med) {
+      min-height: 486px;
+    }
+
+    @include mq($tablet) {
+      min-height: 424px;
+    }
+
+    @include mq($desktopWide) {
+      min-height: 390px
+    }
+
+    @include mq($large-laptop) {
+      min-height: 433px;
+    }
+  }
+}

@@ -3,11 +3,11 @@
 // Function to
 // Convert Px to Ems
 @function em($px, $bc: 16){
-    @return #{$px/$bc}em; 
+    @return calc($px/$bc)em; 
 }
 
 // Function to
 // Convert Px to Rems
 @function rem($px, $bc: 16){
-    @return #{$px/$bc}rem; 
+    @return calc($px/$bc)rem; 
 }
