@@ -110,7 +110,8 @@
       list-style: none;
       display: block;
 
-        &:hover {
+        &:hover
+         {
           color: $textDark;
         }
       }
