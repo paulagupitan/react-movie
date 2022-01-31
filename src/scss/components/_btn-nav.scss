@@ -5,15 +5,14 @@
   border: none;
   background: none;
   z-index: 100;
-  // margin-right: em(12);
 
   &:hover {
     cursor: pointer;
   }
 
   .line {
-    width: 50px;
-    height: 5px;
+    width: 3.125rem;
+    height: 0.3125rem;
     background-color: white;
     display: block;
     margin: 8px auto;

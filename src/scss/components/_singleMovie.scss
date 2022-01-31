@@ -1,3 +1,5 @@
+// Single Movie
+
 .movie-card-single {
   position: relative;
 }
@@ -6,12 +8,12 @@
   height: 80vh;
 
   @include mq($desktop) {
-    min-height: 660px;
-    height: calc(100vh - 8rem);
+    min-height: 41.25rem;
+    height: calc(100vh - 5rem);
     position: relative;
   }
 
-  .backdrop-img {
+  .backdrop-img, .no-backdrop {
     min-width: 18rem;
     height: 86vh;
     object-fit: cover;
@@ -20,31 +22,14 @@
 
     @include mq($desktop) {
       width: 100%;
-      min-height: 660px;
-      height: calc(100vh - 8rem);
+      min-height: 41.25rem;
+      height: calc(100vh - 5rem);
     }
   }
-
-  .no-backdrop {
-    min-width: 18rem;
-    height: 86vh;
-    object-fit: cover;
-    object-position: center;
-    opacity: 20%;
-
-    @include mq($desktop) {
-      width: 100%;
-      min-height: 660px;
-      height: calc(100vh - 8rem);
-    }
-  }
-
-  // fix how it looks on mobile: the poster takes up the whole width (at 320 * heights > 630)
 
   .poster-mobile {
     position: absolute;
     display: block;
-    // top margin is a little off --> try using mixin
     margin: 1.25rem auto;
     top: 0;
     left: 0;
@@ -61,9 +46,8 @@
   .no-poster {
     position: absolute;
     display: block;
-    // top margin is a little off --> try using mixin
     margin: 1.25rem auto;
-    top: 140px;
+    top: 8.75rem;
     left: 0;
     right: 0;
     height: 49vh;
@@ -88,31 +72,30 @@
     position: absolute;
     inset: 10vh 0 0 0;
     background-color: rgba(17, 23, 30, 0.9);
-    min-width: 600px;
-    max-width: 800px;
-    height: 500px;
+    min-width: 37.5rem;
+    max-width: 50rem;
+    height: 31.25rem;
     display: grid;
     grid-template-columns: 40% 60%;
   }
 
-  // fix how it looks on a bigger screen - try to center it more
-  // @include mq(1000px) {
-  //     inset: 16vh 0 0 0;
-  // }
+  @include mq($desktopLarge) {
+    inset: 20vh 0 0 0;
+  }
 
   .poster-desktop {
     display: none;
 
     @include mq($desktop) {
       display: block;
-      min-height: 500px;
+      min-height: 31.25rem;
       object-fit: cover;
     }
   }
 
   .movie-info-single {
     color: $textLight;
-    margin: 3rem auto;
+    margin: 5rem auto;
 
     @include mq($desktop) {
       padding: 0 3rem;
@@ -130,37 +113,22 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+      gap: 0.5rem;
 
       .vote {
         font-size: 1.5rem;
         border: 1px solid $textLight;
         border-radius: 10px;
         background-color: $bgDark;
-        padding: 10px 10px;
+        padding: 0.625rem;
         font-weight: $boldSize;
       }
     }
 
     .fav {
       display: flex;
-      // justify-content: right;
-      // align-items: right;
       justify-content: space-between;
       align-items: center;
     }
-    // button {
-    //     display: block;
-    //     margin: 2rem auto 0;
-    //     border: 1px solid $textLight;
-    //     border-radius: 10px;
-    //     background-color: $brandDark;
-    //     color: $textLight;
-    //     padding: 1rem 2rem;
-    //     font-size: 1rem;
-
-    //     @include mq(820px) {
-    //         margin: 2rem 0 0;
-    //     }
-    // }
   }
 }

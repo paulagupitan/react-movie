@@ -5,14 +5,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 5rem;
   .show {
     -webkit-box-shadow: 0px 17px 3px -5px #000000;
     box-shadow: 0px 17px 3px -5px #000000;
   }
 
   img {
-    width: 160px;
+    width: 10rem;
     display: block;
   }
 
@@ -33,7 +33,7 @@ header {
     header {
       img {
         padding-bottom: 0;
-        margin: 15px 35px;
+        margin: 0.9375rem 2.1875rem;
       }
     }
   }

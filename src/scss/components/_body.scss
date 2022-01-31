@@ -6,38 +6,21 @@ body {
 }
 
 .about-page {
-  padding: 6rem 2rem 0rem 2rem;
-  min-height: 70vh;
+  padding: 6rem 2rem 6rem 2rem;
   text-align: center;
   font-size: 12px;
-  // fixed the fav page message
-  grid-column: span 5;
 
   @include mq($tablet) {
-    margin: 0 auto;
     font-size: 14px;
-    padding-top: 10rem;
-    grid-column: span 5;
+    padding: 6rem 4rem;
   }
   @include mq($laptop) {
-    margin: 0 auto;
-    font-size: 14px;
-    padding: 10rem 4rem 0 4rem;
+    padding: 9rem 4rem;
   }
 }
 
 .about-logo {
-  width: 70px;
+  width: 4.375rem;
   padding-top: 1rem;
-  // display: block;
-  // position: absolute;
   z-index: 100;
-  bottom: 300px;
-  left: 30px;
-  @include mq($tablet) {
-    left: 50px;
-  }
-  @include mq($laptop) {
-    left: 80px;
-  }
 }

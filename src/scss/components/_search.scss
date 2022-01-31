@@ -1,5 +1,6 @@
-// Search on Page Home
+// Search
 
+// Search on Page Home
 .search-nav {
   @include mq($desktop) {
     display: grid;
@@ -7,25 +8,26 @@
     align-items: baseline;
   }
   .search {
-    padding: 2px 40px 1px 40px;
+    padding: 0.125rem 2.5rem 0.0625rem 2.5rem;
   }
 }
 
+// The Actual Search Bar
 .search-bar {
   border: 1px solid #8196a4;
   border-radius: 10px;
   width: 100%;
   padding: 0.5rem 1rem;
-  background-color: #151c27;
-  color: white;
-  // margin-top: 10px;
+  margin: 1rem auto;
+  background-color: $searchDark;
+  color: $textLight;
   &:focus {
     outline: none;
   }
 }
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #999999;
+  color: $grey;
   opacity: 1; /* Firefox */
 }
 
@@ -39,11 +41,8 @@
   color: $textLight;
 }
 
-// Search Bar on Page Search
-
+// Search on Page Search
 .page-search {
-  // the footer gets pushed to the top when the content isnt enough to fill the page...but we want the footer to show at the bottom (ideally just within viewport height) if there is enough room
-
   .no-result {
     font-size: 1.25rem;
     padding-top: 5rem;
@@ -56,23 +55,52 @@
   text-align: center;
   margin: 1rem;
 
-  @include mq($desktopWide) {
+  @include mq($desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.75rem;
     margin: 2rem 3rem;
-
-    .search-form {
-      // justify-self: end;
-    }
+    align-items: center;
   }
 
   .search-results {
     margin-top: 1rem;
 
-    @include mq($desktopWide) {
+    @include mq($desktop) {
       grid-column: 2 / 4;
-      margin: 0 auto;
+      @include mc (false);
       align-self: center;
+    }
+  }
+}
+
+// Changing the min-height of the images to get consistent poster sizes so layout won't break, and preventing text from breaking as well
+
+.page-search {
+  .movie-poster img {
+    min-height: 390px;
+    max-height: 790px;
+    width: 100%;
+    object-fit: cover;
+
+    @include mq($firstBp) {
+      min-height: 465px;
+    }
+
+    @include mq($tablet-med) {
+      min-height: 486px;
+    }
+
+    @include mq($tablet) {
+      min-height: 424px;
+    }
+
+    @include mq($desktopWide) {
+      min-height: 390px
+    }
+
+    @include mq($large-laptop) {
+      min-height: 433px;
     }
   }
 }
