@@ -40,6 +40,7 @@
     text-align: center;
     font-size: 1.5em;
     padding: 0.8125rem 0.75rem;
+    font-weight: 700;
 
     &:hover,
     &:focus,
@@ -47,6 +48,10 @@
       color: #408196;
     }
   }
+}
+
+a.nav-active {
+  color: #408196;
 }
 
 // Sorting Menu

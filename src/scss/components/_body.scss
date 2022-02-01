@@ -8,7 +8,7 @@ body {
 .about-page {
   padding: 6rem 2rem 6rem 2rem;
   text-align: center;
-  font-size: 12px;
+  font-size: $fontSmall;
 
   @include mq($tablet) {
     font-size: 14px;
