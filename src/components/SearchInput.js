@@ -9,14 +9,14 @@ function SearchInput({ query }) {
 
         let q = e.target.elements.search.value;
 
-        navigate(`/search?search=${q}`, { replace: true });
+        navigate(`/search/${q}`, { replace: true });
 
     }
 
     return (
         <div className="search">
             <form className="search-form" action="/search" method="get" onSubmit={handleSubmit}>
-                <label className="sr-only" for="search">Search</label>
+                <label className="sr-only" htmlFor="search">Search</label>
                 <input className='search-bar'
                     type="text"
                     name="search"

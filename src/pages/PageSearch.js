@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import Movies from '../components/Movies';
 import { appTitle, apiKey } from '../globals/globalVariables';
 import SearchInput from '../components/SearchInput';
 
 function PageSearch() {
 
-    const { search } = window.location;
-    const query = new URLSearchParams(search).get('search');
-
+    const { query } = useParams();
     const [movieSearchData, setMovieSearchData] = useState(null);
 
     useEffect(() => {
@@ -20,6 +19,7 @@ function PageSearch() {
         }
 
         getMovie();
+        console.log(movieSearchData);
     }, [query])
 
     useEffect(() => {

@@ -32,7 +32,7 @@ function AppRouter() {
           <Route path="/about" element={<PageAbout />} />
           <Route path="/favourites" element={<PageFavourites favourites={favourites} setFavourites={setFavourites} />}></Route>
           <Route path="/movie/:id" element={<IndividualMovie favourites={favourites} setFavourites={setFavourites} />}></Route>
-          <Route path="/search" element={<PageSearch />}></Route>
+          <Route path="/search/:query" element={<PageSearch />}></Route>
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
