@@ -21,7 +21,7 @@ function AppRouter() {
   return (
     <div className="wrapper">
 
-      <BrowserRouter>
+      <BrowserRouter basename="xtramovie">
         <Header />
         <Routes>
           <Route path="/" element={<PageHome sort="popular" />} />
