@@ -9,8 +9,8 @@ function FavCard({ movie, favourites, setFavourites }) {
         <div className="fav-card-container">
             <div className="fav-movie-poster">
                 {movie.poster_path === null ?
-                    <img src={noPoster} alt="No poster available." /> :
-                    <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
+                    <img className="fav-poster" src={noPoster} alt="No poster available." /> :
+                    <img className="fav-poster" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
                 }
                 <div className="fav-movie-info">
                     <h3 className="fav-movie-date">

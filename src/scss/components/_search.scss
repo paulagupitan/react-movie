@@ -76,60 +76,35 @@
 
 // Changing the min-height of the images to get consistent poster sizes so layout won't break, and preventing text from breaking as well
 
-.page-search {
-  .movie-poster img {
-    min-height: 390px;
-    max-height: 790px;
+.page-search .movie-poster img,
+.fav-movie-poster img.fav-poster {
+    min-height: 24.375rem;
+    max-height: 49.375rem;
     width: 100%;
     object-fit: cover;
 
     @include mq($firstBp) {
-      min-height: 465px;
+      // min-height: 29.0625rem;
+      max-height: 21.375rem;
     }
 
     @include mq($tablet-med) {
-      min-height: 486px;
+      // min-height: 30.375rem;
+      max-height: 19.5rem;
     }
 
     @include mq($tablet) {
-      min-height: 424px;
+      // min-height: 26.5rem;
+      max-height: 19.5rem;
     }
 
     @include mq($desktopWide) {
-      min-height: 390px
+      // min-height: 24.375rem;
+      max-height: 20.25rem;
     }
 
     @include mq($large-laptop) {
-      min-height: 433px;
+      // min-height: 27.0625rem;
+      max-height: 24.0625rem;
     }
   }
-}
-
-.page-search {
-  .movie-poster img {
-    min-height: 390px;
-    max-height: 790px;
-    width: 100%;
-    object-fit: cover;
-
-    @include mq($firstBp) {
-      min-height: 465px;
-    }
-
-    @include mq($tablet-med) {
-      min-height: 486px;
-    }
-
-    @include mq($tablet) {
-      min-height: 424px;
-    }
-
-    @include mq($desktopWide) {
-      min-height: 390px
-    }
-
-    @include mq($large-laptop) {
-      min-height: 433px;
-    }
-  }
-}
